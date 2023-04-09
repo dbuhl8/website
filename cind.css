@@ -17,7 +17,7 @@ body, html {
   border-color: #516473;
   font-family: Georgia;
   border-width: 2px;
-  height: 51.5px;
+  height: 50.5px;
 }
 /* Tabs on navbar*/
 .tablink {
@@ -44,18 +44,24 @@ body, html {
 }
 .contentHome {
   display: flex;
+  flex-direction: row wrap;
+  justify-content: space-between;
 }
-.contentCol13{
+.contentCol3{
+  padding: 5px 20px;
+  text-align: center;
   flex: 33%;
-  width: 33%;
 }
-.contentCol23{
-  flex: 33%;
-  width: 33%
+.contentCol3 + .contentCol3 {
+  border-left-style: dashed;
+  border-width: 0.5px;
+  border-color: #516473;
 }
-.contentCol33{
-  flex: 33%;
-  width: 33%;
+.contentCol3:first-child{
+  text-align: left;
+}
+.fun {
+  display: grid;
 }
 
 
@@ -135,9 +141,13 @@ body, html {
 /*page content formatting so that it isn't covered by the side tabs*/
 .pageContent {
   position: absolute;
+  padding-left: 15px;
   top: 225px;
   left: 230px;
   width: 100%;
+}
+.tab{
+  text-indent: 16px;
 }
 
 #Home {background-color: #C0D7DF; color: #34435e}

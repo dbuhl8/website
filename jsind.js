@@ -9,7 +9,7 @@ function openPage(pageName,elmnt,color) {
     tablinks[i].style.backgroundColor = "";
     tablinks[i].style.borderStyle = "none";
   }
-  document.getElementById(pageName).style.display = "block";
+  document.getElementById(pageName).style.display = "flex";
   elmnt.style.borderRightStyle = "solid";
     elmnt.style.borderLeftStyle = "solid";
     elmnt.style.borderTopStyle = "none";
