@@ -1,0 +1,146 @@
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Georgia;
+}
+
+
+/*nav bar for each webpage*/
+.navBar {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: none;
+  border-left-style: none;
+  border-color: #516473;
+  font-family: Georgia;
+  border-width: 2px;
+  height: 51.5px;
+}
+/* Tabs on navbar*/
+.tablink {
+  background-color: #F4D8C7;
+  color: #72492F;
+  font-family: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+.tablink:hover {
+  background-color: #F69544;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  border: none;
+  padding: 50px 20px;
+  height: 100%;
+}
+.contentHome {
+  display: flex;
+}
+.contentCol13{
+  flex: 33%;
+  width: 33%;
+}
+.contentCol23{
+  flex: 33%;
+  width: 33%
+}
+.contentCol33{
+  flex: 33%;
+  width: 33%;
+}
+
+
+/*Header CSS*/
+.headerRow {
+  vertical-align: middle;
+  background-color: #C0D7DF;
+  color: #F69544;
+  display: flex;
+}
+/*My name in big*/
+.headerName {
+  vertical-align: middle;
+  color: #72492F;
+  font-size: 25px;
+  flex: 50%;
+}
+/*contact info*/
+.headerCol {
+  text-align: left;
+  margin: auto;
+  background-color: #516473;
+  color: #F69544;
+  padding-left: 18px;
+  font-size: 10px;
+  flex: 50%;
+  display: flex;
+}
+/*left and right columns of right side of header*/
+.leftHeaderCol{
+  flex: 50%;
+}
+.rightHeaderCol{
+  margin:auto;
+  flex: 50%;
+}
+
+
+
+
+/*sidenav with hover buttons for each page*/
+.sidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  height: 75px;
+  left: -100px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 200px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  text-align: left;
+  font-family: Georgia;
+  font-size: 20px; /* Increase font size */
+  color: #72492F; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+.sidenav a:hover {
+  left: 20px;
+}
+.button1{
+  top: 200px;
+}
+.button2 {
+  top: 280px;
+}
+.button3 {
+  top: 360px;
+}
+.button4 {
+  top: 440px;
+}
+.hoverButton {
+  background-color: #F4D8C7;
+  margin: auto;
+  font-family: Georgia;
+}
+
+/*page content formatting so that it isn't covered by the side tabs*/
+.pageContent {
+  position: absolute;
+  top: 225px;
+  left: 230px;
+  width: 100%;
+}
+
+#Home {background-color: #C0D7DF; color: #34435e}
+#Projects {background-color: #C0D7DF; color: #34435e}
+#CurrentPosition {background-color: #C0D7DF; color: #34435e}
+#About {background-color: #C0D7DF; color: #34435e}

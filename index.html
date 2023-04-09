@@ -1,10 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>My Personal Website</title>
-  </head>
-  <body>
-    <p>Hello!My Name is Dante Buhl</p>
-    <p>About me: something you may not know about me is my name is Dante Buhl.</p>
-  </body>
-</html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="cind.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jsind.js"></script>
+</head>
+<body>
+<!-- color pallette
+brown = #72492F
+Tattoo Creme = #EEBD9D
+Grey-Blue = #516473
+Orange = #F69544
+LightBlue = #8FB3C0
+AnotherOrange = #E18335
+-->
+
+
+<div class="headerRow">
+  <div class="headerName">
+    <center>
+      <h1>Dante Buhl</h1>
+    </center>
+  </div>
+  <div class="headerCol">
+      <div class="leftHeaderCol">
+        <h1>#: (916)370-7513</h1>
+        <h1>@: dbuhl8@gmail.com</h1>
+      </div>
+      <div class="rightHeaderCol">
+        <a href="https://www.linkedin.com/in/dante-buhl-905493267/"><img src="linkin.jpg" alt="linkedinimg" width="50px" height="50px"></a>
+        <a href="https://github.com/dbuhl8"><img src="githublogo.png" alt="githublogo", width="50px" height="50px"></a>
+      </div>
+  </div>
+</div>
+
+<div id="navBarItem" class="navBar">
+  <button class="tablink" onclick="openPage('Home', this, '#F69544')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('Projects', this, '#F69544')">Projects</button>
+  <button class="tablink" onclick="openPage('CurrentPosition', this, '#F69544')">Current Position</button>
+  <button class="tablink" onclick="openPage('About', this, '#F69544')">OtherThing</button>
+</div>
+
+<div id="Home" class="tabcontent contentHome">
+  <div class="contentCol13">
+    <h3>Home</h3>
+    <p>Hi my name is Dante and this is my website so far! Going to be updated everyday.</p>
+  </div>
+  <div class="contentCol23">
+    <p>content?.... column-wise content????</p>
+  </div>
+  <div class="contentCol33">
+      <img src="selfie2.jpg" alt="selfie" width="150px" height="200px">
+  </div>
+</div>
+
+<div id="Projects" class="tabcontent">
+  <div id="projSideNav" class="sidenav">
+    <a href="#" class="hoverButton button1">Chaos and Fractals</a>
+    <a href="#" class="hoverButton button2">Chaos in Snowboarding</a>
+  </div>
+  <div class="pageContent">
+    <h3>Projects</h3>
+    <p>Some info about the projects I'm working on.</p> 
+  </div>
+</div>
+
+<div id="CurrentPosition" class="tabcontent">
+  <div class="sidenav">
+    <a href="#" class="hoverButton button1">LSS Tutor</a>
+    <a href="#" class="hoverButton button2">SUM Club Secretary</a>
+    <a href="#" class="hoverButton button3">Applied Math M.S.</a>
+    <a href="#" class="hoverButton button4">Towson Univ. REU</a>
+
+  </div>
+  <div class="pageContent">
+    <h3>Projects</h3>
+    <p>Some info about the places and programs I'm associated with.</p> 
+  </div>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>OtherThings</h3>
+  <p>Who we are and what we do.</p>
+</div>
+<script>
+  document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html> 
