@@ -54,7 +54,7 @@ body, html {
 
 
 /* adaptive screening */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
