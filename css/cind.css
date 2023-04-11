@@ -2,6 +2,28 @@
 
 
 
+/* Responsive Font-Sizing
+body {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
+}
+
+*/
+
+
+
+
 /* Sets height, margins, and font family for whole document */
 body, html {
   height: 100%;
@@ -12,7 +34,10 @@ body, html {
 /* Adaptive Column Decorators */
 .colCont {
   display: flex;
-  flex-direction: row wrap;
+  justify-content: start;
+}
+.specCont {
+  display: flex;
   justify-content: start;
 }
 .rowCont{
@@ -29,10 +54,13 @@ body, html {
   padding: 5px 20px;
   text-align: left;
 }
+
 .col-1 {width: 8.33%;flex: 8.33%;}
 .col-2 {width: 16.66%;flex: 16.66%;}
 .col-3 {width: 25%;flex: 25%;}
+.spec-3 {width: 25%;flex: 25%;}
 .col-4 {width: 33.33%;flex: 33.33%;}
+.spec-4 {width: 33.33%;flex: 33.33%;}
 .col-5 {width: 41.66%;flex: 41.66%;}
 .col-6 {width: 50%;flex: 50%;}
 .col-7 {width: 58.33%;flex: 58.33%;}
@@ -48,18 +76,23 @@ body, html {
   border-width: 0.5px;
   border-color: #516473;
 }
-.colBord:first-child{
-  text-align: left;
-}
 
 
 /* adaptive screening */
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
   [class*="col-"] {
-    width: 100%;
+    width: 100vw;
+  }
+  [class*="colCont"] {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  [class*="tabcontent"] {
+    height: 33.33vh;
   }
 }
+
 
 
 /*Header CSS*/
@@ -99,7 +132,6 @@ body, html {
   border-color: #516473;
   font-family: Georgia;
   border-width: 2px;
-  height: 50.5px;
 }
 .tablink {
   background-color: #F4D8C7;
@@ -109,9 +141,10 @@ body, html {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
+  font-size: 1.3vw;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  height: 100%;
 }
 .tablink:hover {
   background-color: #F69544;
@@ -121,10 +154,9 @@ body, html {
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  background-color: #C0D7DF;
   border: none;
   padding: 50px 20px;
-  height: 100%;
+  height: 100%
 }
 
 /*sidenav with hover buttons for each page*/
@@ -135,24 +167,7 @@ body, html {
   border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
 }
 .sidenav button:hover {
-  left: 0%;
-}
-.sidenav a {
-  position: relative; /* Position them relative to the browser window */
-  height: 8%;
-  left: -100px; /* Position them outside of the screen */
-  transition: 0.3s; /* Add transition on hover */
-  padding: 15px; /* 15px padding */
-  width: 200px; /* Set a specific width */
-  text-decoration: none; /* Remove underline */
-  text-align: left;
-  font-family: Georgia;
-  font-size: 20px; /* Increase font size */
-  color: #72492F; /* White text color */
-  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
-}
-.sidenav a:hover {
-  left: 0%;
+  left: -8%;
 }
 .hoverButton {
   position: relative;
@@ -168,7 +183,25 @@ body, html {
   margin: auto;
   font-family: Georgia;
 }
+.hoverButton + .hoverButton {
+  margin-top: 2px;
+}
 /* Implements layering for side buttons */
+
+
+/* Presentation Class */
+.presentation {
+  flex: 100%;
+  height: 100%;
+}
+.img34 {
+  width:60%;
+  height: auto;
+}
+.img11 {
+  max-height: 50px;
+  object-fit: scale-down;
+}
 
 
 /* Text indentation! */
