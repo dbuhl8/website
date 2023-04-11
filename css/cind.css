@@ -1,0 +1,185 @@
+* {box-sizing: border-box}
+
+
+
+/* Sets height, margins, and font family for whole document */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Georgia;
+}
+
+/* Adaptive Column Decorators */
+.colCont {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: start;
+}
+.rowCont{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start ;
+}
+.colDec {
+  padding: 5px 20px;
+  text-align: center;
+}
+.leftColDec{
+  padding: 5px 20px;
+  text-align: left;
+}
+.col-1 {width: 8.33%;flex: 8.33%;}
+.col-2 {width: 16.66%;flex: 16.66%;}
+.col-3 {width: 25%;flex: 25%;}
+.col-4 {width: 33.33%;flex: 33.33%;}
+.col-5 {width: 41.66%;flex: 41.66%;}
+.col-6 {width: 50%;flex: 50%;}
+.col-7 {width: 58.33%;flex: 58.33%;}
+.col-8 {width: 66.66%;flex: 66.66%;}
+.col-9 {width: 75%;flex: 75%;}
+.col-10 {width: 83.33%;flex: 83.33%;}
+.col-11 {width: 91.66%;flex: 91.66;}
+.col-12 {width: 100%;flex: 100%;}
+
+/* Column Interactions*/
+.colBord + .colBord{
+  border-left-style: dashed;
+  border-width: 0.5px;
+  border-color: #516473;
+}
+.colBord:first-child{
+  text-align: left;
+}
+
+
+/* adaptive screening */
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+
+/*Header CSS*/
+.headerRow {
+  vertical-align: middle;
+  background-color: #C0D7DF;
+  color: #F69544;
+}
+/*Left column of header section*/
+.headerName {
+  vertical-align: middle;
+  color: #72492F;
+  font-size: 25px;
+}
+/*Right column of header section*/
+.headerCol {
+  text-align: left;
+  margin: auto;
+  background-color: #516473;
+  color: #F69544;
+  padding-left: 18px;
+  font-size: 10px;
+}
+/*left and right columns of right side of header*/
+.rightHeaderCol{
+  margin:auto;
+}
+
+
+
+/*nav bar for each webpage*/
+.navBar {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: none;
+  border-left-style: none;
+  border-color: #516473;
+  font-family: Georgia;
+  border-width: 2px;
+  height: 50.5px;
+}
+.tablink {
+  background-color: #F4D8C7;
+  color: #72492F;
+  font-family: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+.tablink:hover {
+  background-color: #F69544;
+}
+
+
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  background-color: #C0D7DF;
+  border: none;
+  padding: 50px 20px;
+  height: 100%;
+}
+
+/*sidenav with hover buttons for each page*/
+.sidenav button {
+  transition: 0.3s; 
+  text-decoration: none; 
+  text-align: left;
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+.sidenav button:hover {
+  left: 0%;
+}
+.sidenav a {
+  position: relative; /* Position them relative to the browser window */
+  height: 8%;
+  left: -100px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 200px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  text-align: left;
+  font-family: Georgia;
+  font-size: 20px; /* Increase font size */
+  color: #72492F; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+.sidenav a:hover {
+  left: 0%;
+}
+.hoverButton {
+  position: relative;
+  height: 8vh;
+  max-height: 75px;
+  left: -50%;
+  width: 100%;
+  flex: 100%;
+  font-family: Georgia;
+  font-size: 1.3em;
+  color: #72492F;
+  background-color: #F4D8C7;
+  margin: auto;
+  font-family: Georgia;
+}
+/* Implements layering for side buttons */
+
+
+/* Text indentation! */
+.tab{
+  text-indent: 16px;
+}
+
+/* Page content qualities */
+#Home {background-color: #C0D7DF; color: #34435e}
+#Projects {background-color: #C0D7DF; color: #34435e}
+#CurrentPosition {background-color: #C0D7DF; color: #34435e}
+#About {background-color: #C0D7DF; color: #34435e}
+#chaosFractal {background-color: #C0D7DF; color: #34435e}
+#chaosSnow {background-color: #C0D7DF; color: #34435e}
