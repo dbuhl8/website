@@ -1,156 +1,162 @@
+
+
+
+
+
 * {box-sizing: border-box}
-
-
-
 
 /* Sets height, margins, and font family for whole document */
 body, html {
   height: 100%;
   margin: 0;
   font-family: Georgia;
-  font-size: 100%;
+  font-size: 105%;
   background-color: #C0D7DF;
   color:#72492F;
 }
 /* Adaptive Fonting WHOOOO */
-h1 {
-  font-size: 3em;
-}
+/*h1 {
+  font-size: 3em;}*/
 h2 {
-  font-size: 2.25em;
-}
+  font-size: 2.25em;}
 h3 {
-  font-size: 1.75em;
-}
+  font-size: 1.75em;}
 h4 {
-  font-size: 1.3em;
-}
+  font-size: 1.3em;}
 h5 {
-  font-size: 1.125em;
-}
+  font-size: 1.125em;}
 p {
-  font-size: 0.875em;
-}
-
-.headR {
-  color: #F69544;
-  background-color: #516473; 
-}
+  font-size: 0.875em;}
 
 /* Adaptive Column Decorators */
 .colCont {
   display: flex;
   justify-content: start;
-  /* BORDER Code
+  /* BORDER Code */
+  /*
   border: solid;
   border-color: red;
-  border-width: 3px;
-  */
-}
+  border-width: 3px;*/}
 .specCont {
   display: flex;
-  justify-content: start;
-}
+  justify-content: start;}
 .rowCont{
   display: flex;
   flex-direction: column;
   align-content: flex-start;
-  justify-content: flex-start ;
-}
+  justify-content: flex-start ;}
 .colDec {
   padding: 5%;
-  text-align: center;
-}
+  text-align: center;}
 .colMargDec {
   padding: 5%;
-  text-align: center;
-}
+  text-align: center;}
 .leftColDec{
-  padding: 5px 20px;
-  text-align: left;
-}
-
-/* Border Code
-  border: dashed;
-  border-color: green;
-  border-width: 2px;
-*/
+  padding: 1%;
+  text-align: left;}
 
 /*Creating flex columns with various sizes! Making columning things easy :) */
-/*
-.col-1 {width: 8.33%;flex: 8.33%; border: dashed;
+/* Border Cols */ /*
+.col-1 {flex: 8.33%; border: dashed;
   border-color: green;
   border-width: 2px; }
-.col-2 {width: 16.66%;flex: 16.66%; border: dashed;
+.col-2 {flex: 16.66%; border: dashed;
   border-color: green;
   border-width: 2px; }
-.col-3 {width: 25%;flex: 25%;  border: dashed;
+.col-3 {flex: 25%;  border: dashed;
   border-color: green;
   border-width: 2px; }
-.spec-3 {width: 25%;flex: 25%;height:100%; border: dashed;
+.spec-3 {flex: 25%;height:100%; border: dashed;
   border-color: green;
   border-width: 2px;}
-.col-4 {width: 33.33%;flex: 33.33%; border: dashed;
+.col-4 {flex: 33.33%; border: dashed;
   border-color: green;
   border-width: 2px;}
-.spec-4 {width: 33.33%;flex: 33.33%; border: dashed;
+.spec-4 {flex: 33.33%; border: dashed;
   border-color: green;
   border-width: 2px;}
-.col-5 {width: 41.66%;flex: 41.66%; border: dashed;
+.col-5 {flex: 41.66%; border: dashed;
   border-color: green;
   border-width: 2px;}
-.col-6 {width: 50%;flex: 50%; border: dashed;
+.col-6 {flex: 50%; border: dashed;
   border-color: green;
   border-width: 2px;}
-.col-7 {width: 58.33%;flex: 58.33%; border: dashed;
+.col-7 {flex: 58.33%; border: dashed;
   border-color: green;
   border-width: 2px;}
-.col-8 {width: 66.66%;flex: 66.66%; border: dashed;
+.col-8 {flex: 66.66%; border: dashed;
   border-color: green;
   border-width: 2px;}
-.col-9 {width: 75%;flex: 75%; border: dashed;
+.col-9 {flex: 75%; border: dashed;
   border-color: green;
   border-width: 2px;}
-.col-10 {width: 83.33%;flex: 83.33%; border: dashed;
+.col-10 {flex: 83.33%; border: dashed;
   border-color: green;
   border-width: 2px;} 
-.col-11 {width: 91.66%;flex: 91.66; border: dashed;
+.col-11 {flex: 91.66; border: dashed;
   border-color: green;
   border-width: 2px;}
-.col-12 {width: 100%;flex: 100%; border: dashed;
+.col-12 {flex: 100%; border: dashed;
   border-color: green;
-  border-width: 2px;} */
+  border-width: 2px;} 
+*/
+/* Non-Border Cols */
+  .col-1 {flex: 8.33%;}
+  .col-2 {flex: 16.66%;}
+  .col-3 {flex: 25%;}
+  .spec-3 {flex: 25%;height:100%;}
+  .col-4 {flex: 33.33%;}
+  .spec-4 {flex: 33.33%;}
+  .col-5 {flex: 41.66%;}
+  .col-6 {flex: 50%;}
+  .col-7 {flex: 58.33%;}
+  .col-8 {flex: 66.66%;}
+  .col-9 {flex: 75%;}
+  .col-10 {flex: 83.33%;} 
+  .col-11 {flex: 91.66;}
+  .col-12 {flex: 100%;}
+  
 
-  .col-1 {width: 8.33%;flex: 8.33%;}
-  .col-2 {width: 16.66%;flex: 16.66%;}
-  .col-3 {width: 25%;flex: 25%;}
-  .spec-3 {width: 25%;flex: 25%;height:100%;}
-  .col-4 {width: 33.33%;flex: 33.33%;}
-  .spec-4 {width: 33.33%;flex: 33.33%;}
-  .col-5 {width: 41.66%;flex: 41.66%;}
-  .col-6 {width: 50%;flex: 50%;}
-  .col-7 {width: 58.33%;flex: 58.33%;}
-  .col-8 {width: 66.66%;flex: 66.66%;}
-  .col-9 {width: 75%;flex: 75%;}
-  .col-10 {width: 83.33%;flex: 83.33%;} 
-  .col-11 {width: 91.66%;flex: 91.66;}
-  .col-12 {width: 100%;flex: 100%;}
 
-/* Column Interactions*/
+/* Column Border Interactions*/
 .colBord + .colBord{
   border-left-style: dashed;
   border-width: 0.5px;
   border-color: #516473;
 }
 
-/*
-.headerRow + .navBar {
-  margin-top: 10px;
-} */
+/*Header CSS*/
+.headerRow {
+  /*Header Row */
+  vertical-align: middle;
+  background-color: #C0D7DF;
+  color: #F69544;
+  margin-top: 50px;
+  margin-bottom: 50px;}
+.headerRow div:first-child {
+  /* left most column of header: name */
+  text-align: center;
+  color: #72492F;}
+.headerRow div:last-child {
+  /*right most header column */
+  text-align: left;
+  padding: 10px;
+  margin: 0;
+  /*background-color: #516473; */
+  color: #F69544;
+  display: flex;}
+.headerRow div:last-child div {
+  background-color: #516473;
+  color: #F69544;
+  min-height: 100%;
+  margin: 0;}
+.headerRow div div a {
+  flex: 33%;
+  text-align: center;
+  margin: auto;}
+.headerRow div h1 {
+  font-size: 4.5em;}
 
-h5 + h5 {
-  margin-top: -20px;
-}
 
 
 /* adaptive screening */
@@ -176,30 +182,6 @@ h5 + h5 {
 
 
 
-/*Header CSS*/
-.headerRow {
-  vertical-align: middle;
-  background-color: #C0D7DF;
-  color: #F69544;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-/*Left column of header section*/
-.headerName {
-  vertical-align: middle;
-  color: #72492F;
-}
-/*Right column of header section*/
-.headerCol {
-  text-align: left;
-  margin: auto;
-  background-color: #516473;
-  color: #F69544;
-}
-/*left and right columns of right side of header*/
-.rightHeaderCol{
-  margin:auto;
-}
 /*nav bar for each webpage*/
 .navBar {
   border-top-style: solid;
@@ -211,7 +193,7 @@ h5 + h5 {
   border-width: 2px;
 }
 /*Nav bar button css */
-.tablink {
+div button {
   background-color: #F4D8C7;
   color: #72492F;
   font-family: inherit;
@@ -219,17 +201,13 @@ h5 + h5 {
   /*border: none; to change back */
   outline: none;
   cursor: pointer;
-  /*padding-top: 9px;
-  padding-bottom: 9px;*/
   height: 100%;
+}
+button p {
+  font-size: 2em; margin: 5px;
 }
 .tablink:hover {
   background-color: #F69544;
-}
-.navButton {
-  position: relative;
-  background-color: #F4D8C7;
-  height: 100%
 }
 
 /*commentTest*/
@@ -285,6 +263,7 @@ h5 + h5 {
   max-height: 50px;
   object-fit: scale-down;
 }
+
 
 
 /* Text indentation! */
