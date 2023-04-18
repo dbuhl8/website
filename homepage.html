@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta charset="UTF-8">
+    <meta name="author" content="Dante Buhl">
+    <meta name="description" content="Dante's Website">
+    <link href="css/cind.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jsind.js"></script>
 </head>
 <body>
-    <div id='header'>
-        <div id="navBar">
-            <a href="https://www.youtube.com/">Hey does this work?</a>
+    <!-- Header-->
+    <div class="colCont colDec">
+        <div class="col-6 colDec">
+            <h1>Dante Buhl</h1>
         </div>
-        <div id="title">
-            <a href="https://www.ucsc.edu/index.html">Dante Buhl</a>
-        </div>
-        <div id="optionBar">
-            <ul role="menubar" style>
-                <li>About Me</li>
-                <li>Projects</li>
-                <li>My Current Job</li>
-                <li>Hello</li>
+        <div class="col-6 colDec colCont headR">
+            <div class="col-6 colDec">
+                <h5>#:(916)370-7513</h5>
+                <h5>@:dbuhl8@gmail.com</h5>
+            </div>
+            <div class="col-6 colDec specCont">
+                <a class="spec-4" href="https://www.linkedin.com/in/dante-buhl-905493267/"><img class="img11" src="files/linkin.jpg" alt="linkedinimg"></a>
+                <a class="spec-4" href="https://github.com/dbuhl8"><img class="img11" src="files/githublogo.png" alt="githublogo"></a>
+                <a class="spec-4" href="https://traccloud.go-redrock.com/ucsc/"><img class="img11" src="files/tutorTrac.jpeg" alt="lss"></a>
+            </div>
         </div>
     </div>
+
+    <div class="colCont colDec navBar">
+        <button class="col-3 navButton" onclick="openPage('Home', this, '#F69544')" id="defaultOpen"><h5>Home</h5></button>
+        <button class="col-3 navButton" onclick="openPage('Projects', this, '#F69544')"><h4>Projects</h4></button>
+        <button class="col-3 navButton" onclick="openPage('CurrentPosition', this, '#F69544')">Current Position</button>
+        <button class="col-3 navButton" onclick="openPage('About', this, '#F69544')">OtherThing</button>
+    </div>
+
 </body>

@@ -2,39 +2,48 @@
 
 
 
-/* Responsive Font-Sizing
-body {
-  font-size: 100%;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 1.875em;
-}
-
-p {
-  font-size: 0.875em;
-}
-
-*/
-
-
-
 
 /* Sets height, margins, and font family for whole document */
 body, html {
   height: 100%;
   margin: 0;
   font-family: Georgia;
+  font-size: 100%;
+  background-color: #C0D7DF;
+  color:#72492F;
+}
+/* Adaptive Fonting WHOOOO */
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.25em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.3em;
+}
+h5 {
+  font-size: 1.125em;
+}
+p {
+  font-size: 0.875em;
+}
+
+.headR {
+  color: #F69544;
+  background-color: #516473; 
 }
 
 /* Adaptive Column Decorators */
 .colCont {
   display: flex;
   justify-content: start;
+  border: solid;
+  border-color: red;
+  border-width: 3px;
 }
 .specCont {
   display: flex;
@@ -47,7 +56,11 @@ body, html {
   justify-content: flex-start ;
 }
 .colDec {
-  padding: 5px 20px;
+  padding: 5%;
+  text-align: center;
+}
+.colMargDec {
+  padding: 5%;
   text-align: center;
 }
 .leftColDec{
@@ -55,20 +68,55 @@ body, html {
   text-align: left;
 }
 
-.col-1 {width: 8.33%;flex: 8.33%;}
-.col-2 {width: 16.66%;flex: 16.66%;}
-.col-3 {width: 25%;flex: 25%;}
-.spec-3 {width: 25%;flex: 25%;}
-.col-4 {width: 33.33%;flex: 33.33%;}
-.spec-4 {width: 33.33%;flex: 33.33%;}
-.col-5 {width: 41.66%;flex: 41.66%;}
-.col-6 {width: 50%;flex: 50%;}
-.col-7 {width: 58.33%;flex: 58.33%;}
-.col-8 {width: 66.66%;flex: 66.66%;}
-.col-9 {width: 75%;flex: 75%;}
-.col-10 {width: 83.33%;flex: 83.33%;}
-.col-11 {width: 91.66%;flex: 91.66;}
-.col-12 {width: 100%;flex: 100%;}
+/* Border Code
+  border: dashed;
+  border-color: green;
+  border-width: 2px;
+*/
+
+/*Creating flex columns with various sizes! Making columning things easy :) */
+.col-1 {width: 8.33%;flex: 8.33%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-2 {width: 16.66%;flex: 16.66%;border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-3 {width: 25%;flex: 25%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.spec-3 {width: 25%;flex: 25%;height:100%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-4 {width: 33.33%;flex: 33.33%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.spec-4 {width: 33.33%;flex: 33.33%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-5 {width: 41.66%;flex: 41.66%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-6 {width: 50%;flex: 50%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-7 {width: 58.33%;flex: 58.33%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-8 {width: 66.66%;flex: 66.66%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-9 {width: 75%;flex: 75%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-10 {width: 83.33%;flex: 83.33%; border: dashed;
+  border-color: green;
+  border-width: 2px;} 
+.col-11 {width: 91.66%;flex: 91.66; border: dashed;
+  border-color: green;
+  border-width: 2px;}
+.col-12 {width: 100%;flex: 100%; border: dashed;
+  border-color: green;
+  border-width: 2px;}
 
 /* Column Interactions*/
 .colBord + .colBord{
@@ -77,19 +125,34 @@ body, html {
   border-color: #516473;
 }
 
+/*
+.headerRow + .navBar {
+  margin-top: 10px;
+} */
+
+h5 + h5 {
+  margin-top: -20px;
+}
+
 
 /* adaptive screening */
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
   [class*="col-"] {
-    width: 100vw;
+    flex: 100%
   }
   [class*="colCont"] {
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
-  [class*="tabcontent"] {
-    height: 33.33vh;
+  /*[class*="tabcontent"] {
+    height: 33.33vh
+  } */
+  [class*="colBord"] {
+    border-left-style: none;
+    border-top-style: dashed;
+    border-width: 0.5px;
+    border-color: #516473;
   }
 }
 
@@ -100,12 +163,13 @@ body, html {
   vertical-align: middle;
   background-color: #C0D7DF;
   color: #F69544;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 /*Left column of header section*/
 .headerName {
   vertical-align: middle;
   color: #72492F;
-  font-size: 25px;
 }
 /*Right column of header section*/
 .headerCol {
@@ -113,16 +177,11 @@ body, html {
   margin: auto;
   background-color: #516473;
   color: #F69544;
-  padding-left: 18px;
-  font-size: 10px;
 }
 /*left and right columns of right side of header*/
 .rightHeaderCol{
   margin:auto;
 }
-
-
-
 /*nav bar for each webpage*/
 .navBar {
   border-top-style: solid;
@@ -133,28 +192,35 @@ body, html {
   font-family: Georgia;
   border-width: 2px;
 }
+/*Nav bar button css */
 .tablink {
   background-color: #F4D8C7;
   color: #72492F;
   font-family: inherit;
   float: left;
-  border: none;
+  /*border: none; to change back */
   outline: none;
   cursor: pointer;
-  font-size: 1.3vw;
-  padding-top: 10px;
-  padding-bottom: 8px;
+  /*padding-top: 9px;
+  padding-bottom: 9px;*/
   height: 100%;
 }
 .tablink:hover {
   background-color: #F69544;
 }
+.navButton {
+  position: relative;
+  background-color: #F4D8C7;
+  height: 100%
+}
+
+/*commentTest*/
 
 
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  border: none;
+  /*border: none; to change back */
   padding: 50px 20px;
   height: 100%
 }
@@ -177,7 +243,6 @@ body, html {
   width: 100%;
   flex: 100%;
   font-family: Georgia;
-  font-size: 1.3em;
   color: #72492F;
   background-color: #F4D8C7;
   margin: auto;
