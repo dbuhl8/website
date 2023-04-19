@@ -12,8 +12,7 @@ body, html {
   font-family: Georgia;
   font-size: 105%;
   background-color: #C0D7DF;
-  color:#72492F;
-}
+  color:#72492F;}
 /* Adaptive Fonting WHOOOO */
 /*h1 {
   font-size: 3em;}*/
@@ -166,17 +165,18 @@ p {
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
   [class*="col-"] {
-    flex: 100vw;
+    flex: 100%;
   }
   [class*="spec-3"] {
-    flex: 25vw;
+    width: 24vw;
   }
   [class*="spec-4"] {
-    flex: 33vw;
+    width: 32vw;
   }
   [class*="colCont"] {
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 97vw;
   }
 
   [class*="colBord"] {
