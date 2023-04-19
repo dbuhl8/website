@@ -65,7 +65,7 @@ p {
 .col-3 {flex: 25%;  border: dashed;
   border-color: green;
   border-width: 2px; }
-.spec-3 {flex: 25%;height:100%; border: dashed;
+.spec-3 {flex: 25%; border: dashed;
   border-color: green;
   border-width: 2px;}
 .col-4 {flex: 33.33%; border: dashed;
@@ -133,8 +133,7 @@ p {
   vertical-align: middle;
   background-color: #C0D7DF;
   color: #F69544;
-  margin-top: 50px;
-  margin-bottom: 50px;}
+  margin: 3vh 0}
 .headerRow div:first-child {
   /* left most column of header: name */
   text-align: center;
