@@ -30,12 +30,3 @@ function openSidePage(pageName) {
   }
   document.getElementById(pageName).style.display = "flex";
 }
-
-//These aren't useful hehe
-function findHeight(elementName){
-  return document.getElementById(elementName).offsetHeight;
-}
-
-function findWidth(elementName){
-  return document.getElementById(elementName).offsetWidth;
-}

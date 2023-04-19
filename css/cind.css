@@ -41,9 +41,11 @@ p {
 .colCont {
   display: flex;
   justify-content: start;
+  /* BORDER Code
   border: solid;
   border-color: red;
   border-width: 3px;
+  */
 }
 .specCont {
   display: flex;
@@ -75,15 +77,16 @@ p {
 */
 
 /*Creating flex columns with various sizes! Making columning things easy :) */
+/*
 .col-1 {width: 8.33%;flex: 8.33%; border: dashed;
   border-color: green;
-  border-width: 2px;}
-.col-2 {width: 16.66%;flex: 16.66%;border: dashed;
+  border-width: 2px; }
+.col-2 {width: 16.66%;flex: 16.66%; border: dashed;
   border-color: green;
-  border-width: 2px;}
-.col-3 {width: 25%;flex: 25%; border: dashed;
+  border-width: 2px; }
+.col-3 {width: 25%;flex: 25%;  border: dashed;
   border-color: green;
-  border-width: 2px;}
+  border-width: 2px; }
 .spec-3 {width: 25%;flex: 25%;height:100%; border: dashed;
   border-color: green;
   border-width: 2px;}
@@ -116,7 +119,22 @@ p {
   border-width: 2px;}
 .col-12 {width: 100%;flex: 100%; border: dashed;
   border-color: green;
-  border-width: 2px;}
+  border-width: 2px;} */
+
+  .col-1 {width: 8.33%;flex: 8.33%;}
+  .col-2 {width: 16.66%;flex: 16.66%;}
+  .col-3 {width: 25%;flex: 25%;}
+  .spec-3 {width: 25%;flex: 25%;height:100%;}
+  .col-4 {width: 33.33%;flex: 33.33%;}
+  .spec-4 {width: 33.33%;flex: 33.33%;}
+  .col-5 {width: 41.66%;flex: 41.66%;}
+  .col-6 {width: 50%;flex: 50%;}
+  .col-7 {width: 58.33%;flex: 58.33%;}
+  .col-8 {width: 66.66%;flex: 66.66%;}
+  .col-9 {width: 75%;flex: 75%;}
+  .col-10 {width: 83.33%;flex: 83.33%;} 
+  .col-11 {width: 91.66%;flex: 91.66;}
+  .col-12 {width: 100%;flex: 100%;}
 
 /* Column Interactions*/
 .colBord + .colBord{

@@ -43,8 +43,8 @@
 
 <div class="navBar specCont">
   <button class="spec-3 tablink" onclick="openPage('Home', this, '#F69544')" id="defaultOpen"><p style="font-size: 1.3em; margin: 5px;">Home</p></button>
-  <button class="spec-3 tablink" onclick="openPage('Projects', this, '#F69544')"><p style="font-size: 1.3em; margin: 5px;">Projects</p></button>
-  <button class="spec-3 tablink" onclick="openPage('CurrentPosition', this, '#F69544')"><p style="font-size: 1.3em; margin: 5px;">Positions</p></button>
+  <button class="spec-3 tablink" onclick="window.location.href='./projects/index.html'"><p style="font-size: 1.3em; margin: 5px;">Projects</p></button>
+  <button class="spec-3 tablink" onclick="window.location.href='./positions/index.html'"><p style="font-size: 1.3em; margin: 5px;">Positions</p></button>
   <button class="spec-3 tablink" onclick="openPage('About', this, '#F69544')"><p style="font-size: 1.3em; margin: 5px;">OtherThing</p></button>
 </div>
 
@@ -70,89 +70,6 @@
       </p>
   </div>
 </div>
-
-<div id="Projects" class="tabcontent colCont">
-  <div class="sidenav col-2 colBord">
-    <button class="hoverButton" onclick="openSidePage('chaosFractal')">Chaos and Fractals</button>
-    <button class="hoverButton" onclick="openSidePage('chaosSnow')">Chaos in Snowboarding</button>
-  </div>
-  <div class="col-10 colBord leftColDec">
-    <h3>Projects</h3>
-    <p>Some info about the projects I'm working on/have worked on!</p> 
-  </div>
-</div>
-
-<div id="chaosFractal" class="tabcontent colCont">
-  <div id="projSideNav" class="sidenav col-2 colBord">
-    <button class="hoverButton" onclick="openSidePage('chaosFractal')">Chaos and Fractals</button>
-    <button class="hoverButton" onclick="openSidePage('chaosSnow')">Chaos in Snowboarding</button>
-  </div>
-  <div class="pageContent col-10 colBord colCont">
-    <div class="col-6 leftColDec colBord">
-      <h3>
-        Some Info about my DRP Presentation!
-      </h3>
-      <p class="tab">In the winter quarter of 2023, I worked with a mathematics graduate student, John G. Pelias,
-         to research and complete a project surrounding the dimension of chaotic attractors. At the end of the quarter,
-          this culminated into a 15 minute presentation. The title of the presentation is "Boxes and Balls: Quantifying Chaos". </p>
-      <p class="tab">Throughout the process, I was working on developing MatLab code in order to numerically compute the definitions
-        of dimension which I had studied in the efforts of the project. Results from these limited numerical computations are at the
-        end of the presentation. Ultimately, I learned a lot about self-directed research and some of the difficulties of numerical computation. 
-      </p>
-      <p class="tab">Some of the more challenging concepts which I had to learn in this project include:</p>
-      <ul>
-        <li>The Variational Equation for Dynamical Systems</li>
-        <li>Gram-Schmidt Ortho-normalization Numerical Procedure for n-dim vectors</li>
-        <li>Definitions of Fractal dimension
-            <ul>
-              <li>Box-Counting/Capacity Dimension</li>
-              <li>Lyapunov Dimension</li>
-              <li>Renyi Dimension</li>
-              <li>Pointwise Dimension</li>
-            </ul>
-        </li>
-        <li>Numerical Computation of Lyapunov Exponents</li>
-      </ul>
-    </div>
-    <div class="col-6 colDec colBord colCont">
-      <embed class="presentation" src="files/DRP.pdf" type="application/pdf">
-    </div>
-  </div>
-</div>
-
-
-<div id="chaosSnow" class="tabcontent">
-  <div id="projSideNav" class="sidenav col-2 colBord">
-    <button class="hoverButton button1" onclick="openSidePage('chaosFractal')">Chaos and Fractals</button>
-    <button class="hoverButton button2" onclick="openSidePage('chaosSnow')">Chaos in Snowboarding</button>
-  </div>
-  <div class="pageContent col-10 colBord colCont">
-    <div class="col-6 colDec colBord">
-        <h3>My group's presentation on the Lorenz Snow System</h3>
-        <p class="tab">
-          In Fall 2022, Hayley Coyle, Sebastian Osorio, and I worked together on a project for an course on
-           Applied Dynamical Systems at UC Santa Cruz. The focus of the presentation was on a section of Edward
-            Lorenz's book, "The Essence of Chaos". In his book, Lorenz details and analyzes a 6-variable dynamical system. 
-        </p>
-    </div>
-    <div class="col-6 colDec colBord colCont">
-      <embed class="presentation" src="files/AM 214 Final Project.pdf" type="application/pdf">
-    </div>
-  </div>
-</div>
-
-<div id="CurrentPosition" class="tabcontent colCont">
-  <div class="sidenav col-2 colBord">
-    <button class="hoverButton" onclick="openSidePage('chaosFractal')">LSS Tutor</button>
-    <button class="hoverButton" onclick="openSidePage('chaosFractal')">SUM Club Secretary</button>
-    <button class="hoverButton" onclick="openSidePage('chaosFractal')">Applied Math M.S.</button>
-    <button class="hoverButton" onclick="openSidePage('chaosFractal')">Towson Univ. REU</button>
-  </div>
-  <div class="pageContent col-10 colBord leftColDec">
-    <h3>What is Dante doing right now?</h3>
-    <p>Some info about the places and programs I'm associated with.</p> 
-  </div>
-</div>`
 
 <div id="About" class="tabcontent">
   <div class="pageContent"> 

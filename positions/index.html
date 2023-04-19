@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <meta charset="UTF-8">
+  <meta name="author" content="Dante Buhl">
+  <meta name="description" content="Dante's Website">
+  <title>Dante's Website</title>
+  <link href="../css/cind.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="../files/blueV.jpg">
+  <script type="text/javascript" src="../js/jsind.js"></script>
+
+  <!-- Color Pallette:
+    brown = #72492F
+    Tattoo Creme = #F4D8C7
+    Grey-Blue = #34435e
+    Orange = #F69544
+    LightBlue = #C0D7DF
+    Another Grey-Blue = #516473
+  -->
+
+</head>
+<body>
+
+<div class="headerRow colCont">
+  <div class="headerName col-6">
+    <center>
+      <h1>Dante Buhl</h1>
+    </center>
+  </div>
+  <div class="headerCol col-6 colCont ColMargDec">
+      <div class="col-6 leftColDec">
+        <h4>#: (916)370-7513</h4>
+        <h4>@: dbuhl8@gmail.com</h4>
+      </div>
+      <div class="rightHeaderCol col-6 colDec specCont">
+        <a class="spec-4" href="https://www.linkedin.com/in/dante-buhl-905493267/"><img class="img11" src="../files/linkin.jpg" alt="linkedinimg"></a>
+        <a class="spec-4" href="https://github.com/dbuhl8"><img class="img11" src="../files/githublogo.png" alt="githublogo"></a>
+        <a class="spec-4" href="https://traccloud.go-redrock.com/ucsc/"><img class="img11" src="../files/tutorTrac.jpeg" alt="lss"></a>
+      </div>
+  </div>
+</div>
+
+<div class="navBar specCont">
+  <button class="spec-3 tablink" onclick="window.location.href='../index.html';"><p style="font-size: 1.3em; margin: 5px;">Home</p></button>
+  <button class="spec-3 tablink" onclick="window.location.href='../projects/index.html'"><p style="font-size: 1.3em; margin: 5px;">Projects</p></button>
+  <button class="spec-3 tablink" onclick="openPage('CurrentPosition', this, '#F69544')" id="defaultOpen"><p style="font-size: 1.3em; margin: 5px;">Positions</p></button>
+  <button class="spec-3 tablink" onclick="openPage('About', this, '#F69544')"><p style="font-size: 1.3em; margin: 5px;">OtherThing</p></button>
+</div>
+
+<div id="CurrentPosition" class="tabcontent colCont">
+    <div class="sidenav col-2 colBord">
+      <button class="hoverButton" onclick="openSidePage('LSS')">LSS Tutor</button>
+      <button class="hoverButton" onclick="openSidePage('SUM')">SUM Club Secretary</button>
+      <button class="hoverButton" onclick="openSidePage('AM')">Applied Math M.S.</button>
+      <button class="hoverButton" onclick="openSidePage('REU')">Towson Univ. REU</button>
+    </div>
+    <div class="pageContent col-10 colBord leftColDec">
+      <h3>What is Dante doing right now?</h3>
+      <p>Some info about the places and programs I'm associated with.</p> 
+    </div>
+  </div>
+
+<div id="LSS" class="tabcontent colCont">
+
+</div>
+<div id="SUM" class="tabcontent colCont">
+    
+</div>
+<div id="AM" class="tabcontent colCont">
+    
+</div>
+<div id="REU" class="tabcontent colCont">
+    
+</div>
+
+  <script>
+    document.getElementById("defaultOpen").click();
+  </script>
+
+  </body>
+  </html>
