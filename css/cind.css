@@ -166,20 +166,24 @@ p {
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
   [class*="col-"] {
-    flex: 100%;
+    flex: 100vw;
+  }
+  [class*="spec-3"] {
+    flex: 25vw;
+  }
+  [class*="spec-4"] {
+    flex: 33vw;
   }
   [class*="colCont"] {
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  /*[class*="tabcontent"] {
-    height: 33.33vh
-  } */
+
   [class*="colBord"] {
     border-left-style: none;
     border-top-style: dashed;
-    border-width: 0.5px;
-    border-color: #516473;
+    /*border-width: 0.5px;
+    border-color: #516473;*/
   }
 }
 
