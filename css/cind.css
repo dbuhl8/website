@@ -136,7 +136,7 @@ p {
   vertical-align: middle;
   background-color: #C0D7DF;
   color: #F69544;
-  margin: 3vh 0}
+  margin: 0}
 .headerRow div:first-child {
   /* left most column of header: name */
   text-align: center;
