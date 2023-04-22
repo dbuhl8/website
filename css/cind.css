@@ -14,8 +14,15 @@ body {
   margin: 0;
   font-family: Georgia;
   font-size: 105%;
+
+  /* Temp background */
+  background: #FFFFFF;
+  background: -moz-linear-gradient(left, #FFFFFF 0%, #CAF7FF 50%, #FFCC92 100%);
+  background: -webkit-linear-gradient(left, #FFFFFF 0%, #CAF7FF 50%, #FFCC92 100%);
+  background: linear-gradient(to right, #FFFFFF 0%, #CAF7FF 50%, #FFCC92 100%);
+  /* Old Background
   background-color: #C0D7DF;
-  color:#72492F;}
+  color:#72492F; */}
 /* Adaptive Fonting WHOOOO */
 /*h1 {
   font-size: 3em;}*/
@@ -35,10 +42,10 @@ p {
   display: flex;
   justify-content: start;
   /* BORDER Code */
-  
+ /* 
   border: solid;
   border-color: red;
-  border-width: 3px;}
+  border-width: 3px;*/}
 .specCont {
   display: flex;
   justify-content: start;}
@@ -59,6 +66,7 @@ p {
 
 /*Creating flex columns with various sizes! Making columning things easy :) */
 /* Border Cols */ 
+/*
 .col-1 {flex: 8.33%; border: dashed;
   border-color: green;
   border-width: 2px; }
@@ -101,9 +109,9 @@ p {
 .col-12 {flex: 100%; border: dashed;
   border-color: green;
   border-width: 2px;} 
-
+*/
 /* Non-Border Cols */
-/*
+
   .col-1 {flex: 8.33%;}
   .col-2 {flex: 16.66%;}
   .col-3 {flex: 25%;}
@@ -120,21 +128,22 @@ p {
   .col-12 {flex: 100%;}
   
 
-*/
+
 /* Column Border Interactions*/
-/*
+
 .colBord + .colBord{
   border-left-style: dashed;
   border-width: 0.5px;
   border-color: #516473;
 }
-*/
+
 
 /*Header CSS*/
 .headerRow {
   /*Header Row */
   vertical-align: middle;
-  background-color: #C0D7DF;
+  /* Temp Background Changes
+  background-color: #C0D7DF;*/
   color: #F69544;
   margin: 0}
 .headerRow div:first-child {
@@ -266,7 +275,10 @@ button p {
 .img11 {
   max-height: 50px;
   object-fit: scale-down;}
-
+.img11:hover {
+  opacity: 0.6;
+  
+}
 
 
 /* Text indentation! */
@@ -274,10 +286,10 @@ button p {
   text-indent: 16px;
 }
 
-/* Page content qualities */
+/* Page content qualities */ /* Temp Background Changes
 #Home {background-color: #C0D7DF; color: #34435e}
 #Projects {background-color: #C0D7DF; color: #34435e}
 #CurrentPosition {background-color: #C0D7DF; color: #34435e}
 #About {background-color: #C0D7DF; color: #34435e}
 #chaosFractal {background-color: #C0D7DF; color: #34435e}
-#chaosSnow {background-color: #C0D7DF; color: #34435e}
+#chaosSnow {background-color: #C0D7DF; color: #34435e} */
