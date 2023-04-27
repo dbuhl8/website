@@ -21,6 +21,8 @@ function openPage(pageName,elmnt,color) {
   elmnt.style.backgroundColor = color;
 }
 
+
+
 // This opens pages by the side bar!
 function openSidePage(pageName) {
   var tabcontent
