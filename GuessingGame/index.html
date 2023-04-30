@@ -27,7 +27,7 @@
         padding: 3px;
       }
     </style>
-    <script type="text/javascript" src="ggjs.js"></script>
+    
 
   </head>
 
@@ -38,8 +38,8 @@
 
     <div class="form">
       <label for="guessField">Enter a guess: </label>
-      <input type="number" min="1" max="100" required id="guessField" class="guessField">
-      <input type="submit" value="Submit guess" class="guessSubmit">
+      <input type="number" value="" min="1" max="100" required id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" id="guessSubmit" class="guessSubmit">
     </div>
 
     <div class="resultParas">
@@ -47,11 +47,6 @@
       <p class="lastResult"></p>
       <p class="lowOrHi"></p>
     </div>
-
-    <script>
-
-      // Your JavaScript goes here
-
-    </script>
   </body>
+  <script type="text/javascript" src="ggjs.js"></script>
 </html>
