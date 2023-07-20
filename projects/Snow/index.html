@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <meta charset="UTF-8">
+  <meta name="author" content="Dante Buhl">
+  <meta name="description" content="Dante's Website">
+  <title>Dante's Website</title>
+  <link href="../../css/cind.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="../../files/clancy.jpg">
+  <script type="text/javascript" src="../../js/jsind.js"></script>
+
+  <!-- Color Pallette:
+    brown = #72492F
+    Tattoo Creme = #F4D8C7
+    Grey-Blue = #34435e
+    Orange = #F69544
+    LightBlue = #C0D7DF
+    Another Grey-Blue = #516473
+  -->
+
+</head>
+<body>
+
+    <div class="headerRow colCont">
+    <div class="col-6"><h1>Dante Buhl</h1></div>
+    <div class="col-6">
+        <div class="col-6 leftColDec"><h4>#: (916)370-7513</h4><h4>@: dbuhl8@gmail.com</h4></div>
+        <div class="col-6 specCont">
+          <a href="https://www.linkedin.com/in/dante-buhl-905493267/"><img class="img11" src="../../files/linkin.jpg" alt="linkedinimg"></a>
+          <a href="https://github.com/dbuhl8"><img class="img11" src="../../files/githublogo.png" alt="githublogo"></a>
+        </div>
+    </div>
+    </div>
+
+    <div class="navBar specCont">
+        <button class="spec-3 tablink" onclick="window.location.href='../../index.html';"><p>Home</p></button>
+        <button class="spec-3 tablink" onclick="openPage('chaosSnow', this, '#F69544')" id="defaultOpen"><p>Projects</p></button>
+        <button class="spec-3 tablink" onclick="window.location.href='../../positions/index.html'"><p>Positions</p></button>
+        <button class="spec-3 tablink" onclick="openPage('About', this, '#F69544')"><p>Other</p></button>
+    </div>
+
+    <div id="chaosSnow" class="tabcontent">
+        <div class="sidenav col-2 colBord">
+            <button class="hoverButton" onclick="window.location.href='../Towson/index.html';"><h3>Towson REU</h3></button>
+            <button class="hoverButton" onclick="window.location.href='../Fractal/index.html';"><h3>Fractals</h3></button>
+            <button class="hoverButton" onclick="openSidePage('chaosSnow')"><h3>Snowboarding</h3></button>
+        </div>
+        <div class="pageContent col-10 colBord colCont">
+          <div class="col-6 colDec colBord">
+              <h3>My group's presentation on the Lorenz Snow System</h3>
+              <p class="tab">
+                In Fall 2022, Hayley Coyle, Sebastian Osorio, and I worked together on a project for an course on
+                 Applied Dynamical Systems at UC Santa Cruz. The focus of the presentation was on a section of Edward
+                  Lorenz's book, "The Essence of Chaos". In his book, Lorenz details and analyzes a 6-variable dynamical system. 
+              </p>
+          </div>
+          <div class="col-6 colDec colBord colCont">
+            <embed class="presentation" src="../../files/AM 214 Final Project.pdf" type="application/pdf">
+          </div>
+        </div>
+      </div>
+
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>

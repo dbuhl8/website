@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <meta charset="UTF-8">
+  <meta name="author" content="Dante Buhl">
+  <meta name="description" content="Dante's Website">
+  <title>Dante's Website</title>
+  <link href="../../css/cind.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="../../files/clancy.jpg">
+  <script type="text/javascript" src="../../js/jsind.js"></script>
+
+  <!-- Color Pallette:
+    brown = #72492F
+    Tattoo Creme = #F4D8C7
+    Grey-Blue = #34435e
+    Orange = #F69544
+    LightBlue = #C0D7DF
+    Another Grey-Blue = #516473
+  -->
+
+</head>
+<body>
+
+    <div class="headerRow colCont">
+    <div class="col-6"><h1>Dante Buhl</h1></div>
+    <div class="col-6">
+        <div class="col-6 leftColDec"><h4>#: (916)370-7513</h4><h4>@: dbuhl8@gmail.com</h4></div>
+        <div class="col-6 specCont">
+          <a href="https://www.linkedin.com/in/dante-buhl-905493267/"><img class="img11" src="../../files/linkin.jpg" alt="linkedinimg"></a>
+          <a href="https://github.com/dbuhl8"><img class="img11" src="../../files/githublogo.png" alt="githublogo"></a>
+        </div>
+    </div>
+    </div>
+
+    <div class="navBar specCont">
+        <button class="spec-3 tablink" onclick="window.location.href='../../index.html';"><p>Home</p></button>
+        <button class="spec-3 tablink" onclick="openPage('towson', this, '#F69544')" id="defaultOpen"><p>Projects</p></button>
+        <button class="spec-3 tablink" onclick="window.location.href='../../positions/index.html'"><p>Positions</p></button>
+        <button class="spec-3 tablink" onclick="openPage('About', this, '#F69544')"><p>Other</p></button>
+    </div>
+
+    <div id="towson" class="tabcontent colCont">
+        <div class="sidenav col-2 colBord">
+            <button class="hoverButton" onclick="openSidePage('towson')"><h3>Towson REU</h3></button>
+            <button class="hoverButton" onclick="window.location.href='../Fractal/index.html';"><h3>Fractals</h3></button>
+            <button class="hoverButton" onclick="window.location.href='../Snow/index.html';"><h3>Snowboarding</h3></button>
+        </div>
+
+        <div class="pageContent col-10 colBord colCont">
+        <div class="col-6 leftColDec colBord">
+            <h3>REU in Math-Bio / Fluid Dynamics</h3>
+            <p class="tab">
+            In the summer of 2023, I participated in Towson University's REU program under the mentorship of Dr. Herve Nganguia Ph.D
+            and Dr. Jia-An along with Kristen Lloyd, Garrett Hauser, Jazmin Sharp, and Samuel Armstrong. 
+            </p>
+            <p class="tab">
+            The focus of our research was to validate analytical results on the topic of the propulsion of spherical ciliated organisms 
+            through Stokes Flow, Brinkman Flow, and a Shear-Thinning medium through the use of DeepXDE's deep learning python toolbox. 
+            The program ran from June 5th, 2023 to July 28th, 2023. Throughout the program, we postered at the NSA's Summer REU conference
+            and plan to discuss our research at the Ohio State's Young Mathematicians Conference in August, the Annual Division of Fluid
+            Dynamics Meeting in November, as well as the 2024 Joint Mathematics Meeting in San Francisco. 
+            </p>
+        </div>
+        <div class="col-6 colDec colBord rowCont">
+            <img class="gs" src="../../files/REUGroupPhoto.jpeg" alt="groupselfie">
+            <p class = "tab">
+            Left to Right: Jazmin Sharp, Garrett Hauser, Herve Nganguia, Samuel Armstrong, Kristin Lloyd, Dante Buhl
+            </p>
+            <embed class="presentation" src="../../files/SwimmersGroupPoster.pdf" type="application/pdf">
+            <p class="tab">
+                Poster displayed at NSA Summer 2023 REU Conference
+            </p>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
