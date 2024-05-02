@@ -1,0 +1,288 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+\usepackage{eurosym}
+\usepackage{multicol}
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.5in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=0.8in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactitem will be nice.
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+\usepackage[pdftex]{graphicx}
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+%
+% Follow this section IMMEDIATELY with the first line of the section
+% text. Do not put whitespace in between. That is, do this:
+%
+%       \section{My Information}
+%       Here is my information.
+%
+% and NOT this:
+%
+%       \section{My Information}
+%
+%       Here is my information.
+%
+% Otherwise the top of the section header will not line up with the top
+% of the section. Of course, using a single comment character (%) on
+% empty lines allows for the function of the first example with the
+% readability of the second example.
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{enumerate}[#1]}{\end{enumerate}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Dante Buhl}
+
+\section{Personal Information}
+\newlength{\rcollength}\setlength{\rcollength}{1.85in}
+
+\begin{multicols}{2}
+% {.5\textwidth}
+University of California Santa Cruz,\\
+Department of Engineering,\\
+Santa Cruz, CA, 95064\\
+Address: \href{https://dbuhl8.github.io/website/}{Personal Website}\\
+\columnbreak
+
+Citizenship: U.S.A\\
+Date of Birth: 27th November 2001\\
+E-mail: \href{dbuhl@ucsc.edu}{dbuhl@ucsc.edu} \\
+\end{multicols}
+\vspace{-1cm}
+\section{Research Interests} Fluid Dynamics, Dynamical Systems, High Performance Computing, Machine Learning, PDE based research
+
+\section{Employment}
+
+{\textbf{University of California Santa Cruz}}\\
+{Department of Applied Mathematics UCSC}, Santa Cruz, California, USA\\
+Teaching Assistant: September 2023 -- Current.\\
+
+{\textbf{Towson University REU}}\\
+{Department of Mathematics}, Towson, Maryland, USA\\
+Research Assistant: June 2023 -- August 2023\\
+
+{\textbf{University of California Santa Cruz}}\\
+{Learning Support Services}, Santa Cruz, California, USA\\
+Peer-Group Tutor: September 2022 -- June 2023.\\
+
+\section{Education}
+{\textbf{Masters of Science} (August 2023-Current)} \\
+Major: Scientific Computing and Applied Mathematics; Thesis: Fluid Dynamics\\
+Department of Applied Mathematics, Santa Cruz, California, USA\\ 
+
+{\textbf{Bachelors of Arts} (September 2020-June 2023)}\\
+Major: Mathematics; GPA: 3.74; Graduated with highest honors in the major\\
+Department of Mathematics, Santa Cruz, California, USA\\ 
+
+
+\section{Research \\Experience}
+{\textbf{Master's Thesis}}\\
+{Topic: Investigating the effect of rotation on stratified turbulence}\\
+{Advisor: Pascale Garaud}\\
+{UC Santa Cruz Applied Mathematics, Fall 2023 - Spring 2024}\\
+
+{\textbf{Simulating Spherical Ciliated Organism Locomotion}}\\
+{Topic: Machine-Learning methods for solving Navier-Stokes in a Stokes Flow environment with spherical boundaray conditions}\\
+{Advisor: Herve Nganguia}\\
+{Towson University Mathematics REU, Summer 2023}\\
+
+{\textbf{Boxes and Balls: Quantifying Chaos}}\\
+{Topic: Numerical Methods for computing the fractal dimension of chaotic attractors}\\
+{Mentor: John G. Pelias}\\
+{Directed Reading Program, UC Santa Cruz Mathematics Dept., Winter 2023}\\
+
+{\textbf{The Pow-der of Ani-snow-tropy}}\\
+{Topic: Investigation of the Lorenz Ski-Slope system from, \textit{The Essence of Chaos} by Edward Lorenz}\\
+{AM 214: Applied Dynamical Systems, UC Santa Cruz, Fall 2022}\\
+
+\section{Teaching \\Experience}
+
+{\textbf{Math 19A} (TA: Fall 2023, Peer-Group Tutor: Fall 2022): Calculus for Science, Engineering, and Mathematics} \\
+{\textbf{Math 11A} (Peer-Group Tutor: Winter-Spring 2023): Calculus with Applications}
+
+
+\section{Awards And\\Recognitions}
+
+\textbf{Next Gen. Scholars in Applied Mathematics} UC Santa Cruz 2023.\\
+\textbf{T\&LC Graduate Pedagogy Fellowship} UC Santa Cruz 
+
+
+\section{Languages and Other Activities}
+%
+{Intermediate Spanish}\\ 
+{Secretary and Member of Slugs United by Mathematics Math Club (2022-current)}\\ 
+{Proficient in Fortran, Python, Matlab, Java, and Excel.} 
+
+\section{References}
+\begin{multicols}{2}
+{\bf Pascale Garaud}\\
+Chair of Applied Mathematics Dept.,\\
+Professor of Applied Mathematics,\\
+University of California Santa Cruz,\\
+606 Engineering Loop\\
+Santa Cruz, CA 95064\\
+
+\textbf{Chris Edwards}\\
+ Professor of Ocean and Earth Sciences,\\
+ University of California Santa Cruz,\\
+ Earth and Marine Sciences Building, 447\\
+ Santa Cruz, CA 95064\\
+
+\columnbreak
+
+\textbf{Herve Nganguia} \\
+Assistant Professor of Mathematics,\\
+Towson University,\\
+7800 York Road\\
+ Towson, MD 21252\\
+
+\textbf{Hongyun Wang} \\
+Professor of Applied Mathematics, \\
+University of California Santa Cruz, \\
+606 Engineering Loop\\
+Santa Cruz, CA 95064\\
+
+\end{multicols}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
