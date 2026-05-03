@@ -1,105 +1,407 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <meta name="author" content="Dante Buhl">
-  <meta name="description" content="Dante's Website">
-  <title>Dante's Website</title>
+  <meta name="description" content="Dante Buhl — PhD Candidate in Applied Mathematics at UC Santa Cruz">
+  <title>Dante Buhl</title>
   <link href="css/cind.css" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/x-icon" href="files/clancy.jpg">
   <script type="text/javascript" src="js/jsind.js"></script>
-
-  <!-- Color Pallette:
-    brown = #72492F
-    Tattoo Creme = #F4D8C7
-    Grey-Blue = #34435e
-    Orange = #F69544
-    LightBlue = #C0D7DF
-    Another Grey-Blue = #516473
-  -->
-
 </head>
 <body>
 
-<div class="headerRow colCont">
-  <div class="col-6">
-      <h1>Dante Buhl</h1>
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-name">
+    <h1>Dante Buhl</h1>
+    <p class="header-subtitle">PhD Candidate &mdash; Applied Mathematics &mdash; UC Santa Cruz</p>
   </div>
-  <div class="col-6">
-      <div class="col-6 leftColDec">
-        <h4>#: (916)370-7513</h4>
-        <h4>@: dbuhl8@gmail.com</h4>
-      </div>
-      <div class="col-6 specCont">
-        <a href="https://www.linkedin.com/in/dante-buhl-905493267/"><img class="img11" src="files/linkin.jpg" alt="linkedinimg"></a>
-        <a href="https://github.com/dbuhl8"><img class="img11" src="files/githublogo.png" alt="githublogo"></a>
-      </div>
+  <div class="header-links">
+    <div class="contact-info">
+      <span>dbuhl@ucsc.edu</span>
+      <span>(916) 370-7513</span>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/dante-buhl-905493267/" title="LinkedIn">
+        <img class="img11" src="files/linkedinimg2.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/dbuhl8" title="GitHub">
+        <img class="img11" src="files/githublogo.png" alt="GitHub">
+      </a>
+    </div>
   </div>
-</div>
+</header>
 
-<div class="navBar specCont">
-  <button class="spec-3 tablink" onclick="openPage('Home', this, '#F69544')" id="defaultOpen"><p>Home</p></button>
-  <button class="spec-3 tablink" onclick="window.location.href='./projects/index.html'"><p>Projects</p></button>
-  <button class="spec-3 tablink" onclick="window.location.href='./positions/index.html'"><p>Positions</p></button>
-  <button class="spec-3 tablink" onclick="openPage('About', this, '#F69544')"><p>Other</p></button>
-</div>
+<!-- ===== NAVIGATION ===== -->
+<nav class="navBar">
+  <button class="tablink" onclick="openPage('Home', this, '#F69544')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('Research', this, '#F69544')">Research</button>
+  <button class="tablink" onclick="openPage('EduExp', this, '#F69544')">Education &amp; Experience</button>
+  <button class="tablink" onclick="openPage('Projects', this, '#F69544')">Projects</button>
+  <button class="tablink" onclick="openPage('CV', this, '#F69544')">CV</button>
+</nav>
 
-<div id="Home" class="tabcontent colCont">
-  <div class="col-4 leftColDec colBord">
-    <h3>Home</h3>
-    <p class="tab">Hello, my name is Dante Buhl. I'm a graduate student at UCSC earning a M.S. in Scientific Computing and Applied Mathematics. 
-      I've been studying at UCSC since 2020, and I received my Bachelors in Pure Mathematics in the Spring of 2023. 
-      I'm currenly at Towson University in Maryland participating in a Summer REU program stuying the motility and propulsion of spherical
-     ciliated organisms in low reynolds number environments. 
-    </p>
-    <p class="tab">Also a fun fact if you haven't noticed. This websites 
-      color theme is based on the Grand Budapest Hotel's thermal baths room. 
-    </p>
-  </div>
-  <div class="col-4 colDec colBord">
-    <p>If you'd like to find out more about be please feel free to check my LinkedIn at the top of the page or to see my resume and most recent transcript (below).</p>
-    <embed class="presentation" src="files/Resume10.17.23.pdf" type="application/pdf">
-    <embed class="presentation" src="files/transcript.pdf" type="application/pdf">
-  </div>
-  <div class="col-4 colDec colBord">
-      <img class="img34" src="files/selfie2.jpg" alt="selfie">
-      <h3>Dante Buhl</h3>
-      <p>
-        "Health is about accepting and perceiving and dealing with reality on reality's terms." - Dr. Drew
+<!-- ===== HOME TAB ===== -->
+<div id="Home" class="tabcontent">
+  <div class="tab-body home-layout">
+
+    <div class="home-photo-col">
+      <img class="profile-photo" src="files/selfie2.jpg" alt="Dante Buhl">
+      <h3 style="margin: 0.5em 0 0.1em;">Dante Buhl</h3>
+      <p class="muted-text" style="margin: 0; text-align: center;">
+        PhD Candidate<br>Applied Mathematics<br>UC Santa Cruz
       </p>
+    </div>
+
+    <div class="home-bio-col">
+      <h2 class="section-header">About Me</h2>
+      <p class="tab">Hello! I'm Dante Buhl, a PhD candidate in Applied Mathematics at the University of California,
+        Santa Cruz, advised by Professor Pascale Garaud. My research focuses on stratified turbulence, rotating flows,
+        and high-performance computing applied to geophysical and astrophysical fluid dynamics.</p>
+      <p class="tab">I received my M.S. in Scientific Computing and Applied Mathematics from UCSC in August 2024,
+        with a thesis on the effect of rotation on stratified turbulence. Before that, I completed my B.A. in
+        Mathematics with highest honors from UCSC in June 2023.</p>
+
+      <h3 class="subsection-header">Research Interests</h3>
+      <div class="tag-group">
+        <span class="tag">Fluid Dynamics</span>
+        <span class="tag">Stratified Turbulence</span>
+        <span class="tag">Rotating Flows</span>
+        <span class="tag">Multiscale Dynamics</span>
+        <span class="tag">High Performance Computing</span>
+        <span class="tag">PDE-Based Research</span>
+      </div>
+
+      <h3 class="subsection-header">Skills &amp; Tools</h3>
+      <div class="tag-group">
+        <span class="tag tag-alt">Python</span>
+        <span class="tag tag-alt">Fortran</span>
+        <span class="tag tag-alt">MATLAB</span>
+        <span class="tag tag-alt">Java</span>
+        <span class="tag tag-alt">JavaScript</span>
+        <span class="tag tag-alt">R</span>
+        <span class="tag tag-alt">LaTeX</span>
+        <span class="tag tag-alt">Numerical Methods</span>
+        <span class="tag tag-alt">Scientific Writing</span>
+        <span class="tag tag-alt">Linux / HPC</span>
+      </div>
+
+      <blockquote class="quote">"Health is about accepting and perceiving and dealing with reality on reality's terms." &mdash; Dr. Drew</blockquote>
+    </div>
+
   </div>
 </div>
 
-<div id="About" class="tabcontent">
-  <div class="pageContent"> 
-    <h3>OtherThings</h3>
-    <p>Who we are and what we do.</p>
-    <ul>
-      <li>
-        <div>Item 1</div>
-        <ul>
-          <li>Subitem A
-            <uL>
-              <li>Hey is this that color?</li>
-            </uL>
-          </li>
-          <li>Subitem B</li>
-        </ul>
-      </li>
-      <li>
-        <div>Item 2</div>
-        <ul>
-          <li>Subitem A</li>
-          <li>Subitem B</li>
-        </ul>
-      </li>
-    </ul>
-    
+<!-- ===== RESEARCH TAB ===== -->
+<div id="Research" class="tabcontent">
+  <div class="tab-body">
+
+    <h2 class="section-header">Research &amp; Prior Work</h2>
+
+    <h3 class="subsection-header">Conference Presentations</h3>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">EGU 2025: Stratified Turbulence in Geophysical &amp; Astrophysical Flows</span>
+        <span class="card-date">April 2025</span>
+      </div>
+      <p><strong>Poster:</strong> Rotating Stratified Turbulence</p>
+      <p><strong>Coauthors:</strong> Pascale Garaud, Hongyun Wang</p>
+      <div class="tag-group">
+        <span class="tag">Stratified Turbulence</span>
+        <span class="tag">Rotating Flows</span>
+        <span class="tag">Geophysics</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">APS DFD 2024: Geophysical Fluid Dynamics &mdash; Stratified Flows II</span>
+        <span class="card-date">November 2024</span>
+      </div>
+      <p><strong>Talk:</strong> Rotating Stratified Turbulence</p>
+      <p><strong>Coauthors:</strong> Pascale Garaud, Hongyun Wang</p>
+      <div class="tag-group">
+        <span class="tag">Fluid Dynamics</span>
+        <span class="tag">Stratified Turbulence</span>
+      </div>
+    </div>
+
+    <h3 class="subsection-header">Thesis Research</h3>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">The Effect of Rotation on Stratified Turbulence</span>
+        <span class="card-date">Fall 2023 &ndash; Summer 2024</span>
+      </div>
+      <p><strong>Type:</strong> M.S. Thesis &nbsp;&middot;&nbsp; <strong>Advisor:</strong> Pascale Garaud</p>
+      <p>UC Santa Cruz Department of Applied Mathematics. Investigated how rotation modifies the dynamics of
+        stably stratified turbulent flows relevant to geophysical and astrophysical contexts, using
+        direct numerical simulation on high-performance computing resources.</p>
+      <div class="tag-group">
+        <span class="tag">Stratified Turbulence</span>
+        <span class="tag">Rotation</span>
+        <span class="tag">HPC</span>
+        <span class="tag">Fortran</span>
+        <span class="tag">DNS</span>
+      </div>
+    </div>
+
+    <h3 class="subsection-header">Prior Research Projects</h3>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Simulating Spherical Ciliated Organism Locomotion</span>
+        <span class="card-date">Summer 2023</span>
+      </div>
+      <p><strong>Program:</strong> Towson University REU &nbsp;&middot;&nbsp; <strong>Advisor:</strong> Dr. Herv&eacute; Nganguia</p>
+      <p>Applied machine-learning methods (DeepXDE) to solve the Navier-Stokes equations in Stokes flow,
+        Brinkman flow, and shear-thinning media with spherical boundary conditions, modeling the
+        propulsion of ciliated microorganisms. Results were presented at the NSA Summer REU
+        Conference and the Towson University REU symposium.</p>
+      <div class="tag-group">
+        <span class="tag">Fluid Dynamics</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Stokes Flow</span>
+        <span class="tag">DeepXDE</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Boxes and Balls: Quantifying Chaos</span>
+        <span class="card-date">Winter 2023</span>
+      </div>
+      <p><strong>Program:</strong> Directed Reading Program, UCSC Mathematics Dept. &nbsp;&middot;&nbsp; <strong>Mentor:</strong> John G. Pelias</p>
+      <p>Developed MATLAB code to numerically compute multiple definitions of fractal dimension
+        (box-counting, Lyapunov, Renyi, pointwise) for chaotic attractors, including the Lorenz
+        attractor. Topics covered included the Variational Equation, Gram-Schmidt orthonormalization,
+        and numerical computation of Lyapunov exponents. Culminated in a 15-minute departmental presentation.</p>
+      <div class="tag-group">
+        <span class="tag">Dynamical Systems</span>
+        <span class="tag">Fractal Dimension</span>
+        <span class="tag">Lyapunov Exponents</span>
+        <span class="tag">MATLAB</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">The Pow-der of Ani-snow-tropy</span>
+        <span class="card-date">Fall 2022</span>
+      </div>
+      <p><strong>Course:</strong> AM 214: Applied Dynamical Systems, UC Santa Cruz</p>
+      <p>Group analysis (with Hayley Coyle and Sebastian Osorio) of the 6-variable Lorenz Ski-Slope
+        system from Edward Lorenz's <em>The Essence of Chaos</em>, examining chaotic behavior and
+        parameter sensitivity.</p>
+      <div class="tag-group">
+        <span class="tag">Dynamical Systems</span>
+        <span class="tag">Lorenz System</span>
+        <span class="tag">Chaos Theory</span>
+      </div>
+    </div>
+
   </div>
 </div>
+
+<!-- ===== EDUCATION & EXPERIENCE TAB ===== -->
+<div id="EduExp" class="tabcontent">
+  <div class="tab-body two-col-layout">
+
+    <div class="two-col-left">
+
+      <h2 class="section-header">Education</h2>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Doctor of Philosophy &mdash; Applied Mathematics</h4>
+          <p class="timeline-meta">UC Santa Cruz &nbsp;&middot;&nbsp; September 2024 &ndash; Present</p>
+          <p>Advisor: Pascale Garaud<br>Department of Applied Mathematics</p>
+          <div class="tag-group"><span class="tag">In Progress</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Master of Science &mdash; Scientific Computing &amp; Applied Mathematics</h4>
+          <p class="timeline-meta">UC Santa Cruz &nbsp;&middot;&nbsp; August 2023 &ndash; August 2024</p>
+          <p>Thesis: <em>The Effect of Rotation on Stratified Turbulence</em></p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Bachelor of Arts &mdash; Mathematics (Highest Honors)</h4>
+          <p class="timeline-meta">UC Santa Cruz &nbsp;&middot;&nbsp; September 2020 &ndash; June 2023</p>
+          <p>GPA: 3.74 &nbsp;&middot;&nbsp; Graduated with Highest Honors in the Major</p>
+        </div>
+      </div>
+
+      <h2 class="section-header" style="margin-top: 2em;">Awards &amp; Recognition</h2>
+
+      <div class="award-item">
+        <strong>Next Generation Scholars in Applied Mathematics</strong>
+        <p class="timeline-meta" style="margin: 2px 0 0;">UC Santa Cruz, 2023</p>
+      </div>
+      <div class="award-item">
+        <strong>T&amp;LC Graduate Pedagogy Fellowship</strong>
+        <p class="timeline-meta" style="margin: 2px 0 0;">UC Santa Cruz</p>
+      </div>
+
+      <h2 class="section-header" style="margin-top: 2em;">Activities</h2>
+      <div class="award-item">
+        <strong>Secretary &amp; Member</strong> &mdash; Slugs United by Mathematics (SUM) Math Club
+        <p class="timeline-meta" style="margin: 2px 0 0;">UC Santa Cruz, 2022 &ndash; 2024</p>
+      </div>
+      <div class="award-item">
+        <strong>Intermediate Spanish</strong>
+      </div>
+
+    </div>
+
+    <div class="two-col-right">
+
+      <h2 class="section-header">Teaching Experience</h2>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Teaching Assistant &mdash; UC Santa Cruz</h4>
+          <p class="timeline-meta">September 2023 &ndash; Present</p>
+          <ul class="course-list">
+            <li><strong>AM 112</strong> (Winter 2025): Introduction to Partial Differential Equations</li>
+            <li><strong>AM 11B</strong> (Spring 2024): Mathematical Methods for Economists II</li>
+            <li><strong>Math 19B</strong> (Winter 2024): Calculus for Science, Engineering, and Mathematics II</li>
+            <li><strong>Math 19A</strong> (Fall 2023): Calculus for Science, Engineering, and Mathematics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Peer-Group Tutor &mdash; Learning Support Services, UCSC</h4>
+          <p class="timeline-meta">September 2022 &ndash; June 2023</p>
+          <ul class="course-list">
+            <li><strong>Math 19A</strong> (Fall 2022): Calculus for Science, Engineering, and Mathematics</li>
+            <li><strong>Math 11A</strong> (Winter &ndash; Spring 2023): Calculus with Applications</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="section-header" style="margin-top: 2em;">Employment</h2>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Teaching Assistant</h4>
+          <p class="timeline-meta">UCSC Dept. of Applied Mathematics &nbsp;&middot;&nbsp; September 2023 &ndash; Present</p>
+          <p class="muted-text">Santa Cruz, California</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Research Assistant &mdash; REU Program</h4>
+          <p class="timeline-meta">Towson University Dept. of Mathematics &nbsp;&middot;&nbsp; June &ndash; August 2023</p>
+          <p class="muted-text">Towson, Maryland</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4>Peer-Group Tutor</h4>
+          <p class="timeline-meta">UCSC Learning Support Services &nbsp;&middot;&nbsp; September 2022 &ndash; June 2023</p>
+          <p class="muted-text">Santa Cruz, California</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PROJECTS TAB ===== -->
+<div id="Projects" class="tabcontent">
+  <div class="tab-body">
+
+    <h2 class="section-header">Projects</h2>
+    <p>Selected computational and mathematical projects. Click a card to read more.</p>
+
+    <div class="project-grid">
+
+      <a class="project-card" href="projects/Towson/index.html">
+        <div class="project-card-inner">
+          <h3>Swimmer Locomotion</h3>
+          <p>Machine-learning methods (DeepXDE) for simulating the propulsion of spherical ciliated
+            organisms in Stokes flow, Brinkman flow, and shear-thinning media.</p>
+          <p class="muted-text">Towson University REU &mdash; Summer 2023</p>
+          <div class="tag-group">
+            <span class="tag">Fluid Dynamics</span>
+            <span class="tag">DeepXDE</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="projects/Fractal/index.html">
+        <div class="project-card-inner">
+          <h3>Boxes &amp; Balls: Quantifying Chaos</h3>
+          <p>Numerical computation of fractal dimensions (box-counting, Lyapunov, Renyi, pointwise)
+            for chaotic attractors, with code developed in MATLAB.</p>
+          <p class="muted-text">DRP, UCSC Mathematics &mdash; Winter 2023</p>
+          <div class="tag-group">
+            <span class="tag">Dynamical Systems</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Fractals</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="projects/Snow/index.html">
+        <div class="project-card-inner">
+          <h3>The Pow-der of Ani-snow-tropy</h3>
+          <p>Group analysis of Edward Lorenz's 6-variable Ski-Slope dynamical system and its
+            chaotic properties.</p>
+          <p class="muted-text">AM 214: Applied Dynamical Systems, UCSC &mdash; Fall 2022</p>
+          <div class="tag-group">
+            <span class="tag">Chaos Theory</span>
+            <span class="tag">Lorenz System</span>
+            <span class="tag">Dynamical Systems</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== CV TAB ===== -->
+<div id="CV" class="tabcontent">
+  <div class="tab-body">
+
+    <h2 class="section-header">Curriculum Vitae</h2>
+    <p>
+      Download: &nbsp;
+      <a class="dl-link" href="files/cv.pdf" download>cv.pdf</a>
+      &nbsp;&middot;&nbsp;
+      <a class="dl-link" href="files/resume.pdf" download>resume.pdf</a>
+    </p>
+    <embed class="cv-embed" src="files/cv.pdf" type="application/pdf">
+
+  </div>
+</div>
+
 <script>
   document.getElementById("defaultOpen").click();
 </script>
 </body>
-</html> 
+</html>

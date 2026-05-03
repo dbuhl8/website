@@ -1,8 +1,6 @@
 
-
-
-// This opens pages by the nav bar!
-function openPage(pageName,elmnt,color) {
+// Opens a tab by name and highlights the active nav button
+function openPage(pageName, elmnt, color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -21,13 +19,10 @@ function openPage(pageName,elmnt,color) {
   elmnt.style.backgroundColor = color;
 }
 
-
-
-// This opens pages by the side bar!
+// Opens a sub-page within a multi-section tab (used by project subpages)
 function openSidePage(pageName) {
-  var tabcontent
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
+  var tabcontent = document.getElementsByClassName("tabcontent");
+  for (var i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
   document.getElementById(pageName).style.display = "flex";
