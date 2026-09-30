@@ -14,7 +14,7 @@ function openPage(pageName, elmnt, color) {
   document.getElementById(pageName).style.display = "flex";
   elmnt.style.borderRightStyle = "solid";
   elmnt.style.borderLeftStyle = "solid";
-  elmnt.style.borderColor = "#516473";
+  elmnt.style.borderColor = "#74add1";
   elmnt.style.borderWidth = "2px";
   elmnt.style.backgroundColor = color;
 }
