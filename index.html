@@ -95,20 +95,18 @@
         <span class="tag tag-alt">Scientific Machine Learning</span>
       </div>
 
-      <figure class="sim-figure" style="margin-top: 2em;">
-        <video class="sim-video" id="homeVideo" muted loop playsinline preload="auto"
-               poster="files/ux_00436.png">
-          <source src="files/ux_B180.webm" type="video/webm">
-          <source src="files/ux_B180.mp4" type="video/mp4">
-        </video>
-        <figcaption>Horizontal velocity <em>u<sub>x</sub></em> from a direct numerical simulation of stratified
-          turbulence (run B180). <a href="projects/Stratified/index.html">More simulations &rarr;</a></figcaption>
-      </figure>
-      <script>
-        playInSync([document.getElementById("homeVideo")]);
-      </script>
-
     </div>
+
+    <figure class="sim-figure home-video-col">
+      <video class="sim-video" id="homeVideo" muted loop playsinline preload="auto"
+             poster="files/ux_00436.png">
+        <source src="files/ux_B180.webm" type="video/webm">
+        <source src="files/ux_B180.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <script>
+      playInSync([document.getElementById("homeVideo")]);
+    </script>
 
   </div>
 </div>
@@ -457,7 +455,7 @@
         </div>
       </a>
 
-      <div class="project-card">
+      <a class="project-card" href="projects/StatArb/index.html">
         <div class="project-card-inner">
           <h3>Statistical Arbitrage via Ornstein&ndash;Uhlenbeck Mean Reversion</h3>
           <p>Modeling cointegrated asset-pair spreads as OU processes, with maximum-likelihood estimation,
@@ -469,7 +467,7 @@
             <span class="tag">Python</span>
           </div>
         </div>
-      </div>
+      </a>
 
       <a class="project-card" href="projects/Towson/index.html">
         <div class="project-card-inner">

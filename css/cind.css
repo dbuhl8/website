@@ -145,25 +145,33 @@ a:hover { color: var(--scarlet); }
    HOME LAYOUT
    =================================================================== */
 .home-layout {
-  display: flex;
-  gap: 2vw;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(180px, 18%) 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "photo bio" "video bio";
+  column-gap: 2vw;
   max-width: 100%;
 }
 .home-photo-col {
+  grid-area: photo;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 180px;
-  width: 18%;
   padding: 1em 0.5em;
   border-right: 1px dashed var(--teal);
 }
 .home-bio-col {
-  flex: 1;
-  min-width: 280px;
+  grid-area: bio;
+  min-width: 0;
   padding: 1em 1em 1em 2em;
 }
+.home-layout .home-video-col {
+  grid-area: video;
+  margin: 0;
+  padding: 0 0.5em 1em;
+  border-right: 1px dashed var(--teal);
+}
+.home-video-col .sim-video { border: none; }
 .profile-photo {
   width: 100%;
   max-width: 160px;
@@ -653,7 +661,12 @@ button p { font-size: 2em; margin: 5px; }
   .site-header { flex-direction: column; align-items: flex-start; }
   .header-name h1 { font-size: 2em; }
   .contact-info { align-items: flex-start; }
-  .home-layout { flex-direction: column; }
+  .home-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "photo" "bio" "video";
+  }
+  .home-layout .home-video-col { border-right: none; padding: 0 0 1em; }
   .home-photo-col {
     width: 100%;
     border-right: none;

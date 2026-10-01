@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="author" content="Dante Buhl">
+  <meta name="description" content="Dante Buhl — PhD Student in Applied Mathematics at UC Santa Cruz">
+  <title>Dante Buhl — Statistical Arbitrage</title>
+  <link href="../../css/cind.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="../../files/ux_00436.png">
+  <script type="text/javascript" src="../../js/jsind.js"></script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-name">
+    <h1>Dante Buhl</h1>
+    <p class="header-subtitle">PhD Student &mdash; Applied Mathematics &mdash; UC Santa Cruz</p>
+  </div>
+  <div class="header-links">
+    <div class="contact-info">
+      <a href="mailto:dbuhl@ucsc.edu">dbuhl@ucsc.edu</a>
+      <a href="tel:+19163707513">(916) 370-7513</a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/dante-buhl-905493267/" title="LinkedIn">
+        <img class="img11" src="../../files/linkdin.jpg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/dbuhl8" title="GitHub">
+        <img class="img11" src="../../files/githublogo.png" alt="GitHub">
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navBar">
+  <button class="tablink" onclick="location.href='../../index.html#Home'">Home</button>
+  <button class="tablink" onclick="location.href='../../index.html#Research'">Research</button>
+  <button class="tablink" onclick="location.href='../../index.html#EduExp'"><span class="long">Education &amp; Experience</span><span class="short">Experience</span></button>
+  <button class="tablink active" onclick="location.href='../../index.html#Projects'">Projects</button>
+  <button class="tablink" onclick="location.href='../../index.html#CV'">CV / Resume</button>
+</nav>
+
+<!-- ===== PROJECT ===== -->
+<main class="tab-body project-page">
+
+    <a class="back-link" href="../../index.html#Projects">&larr; All projects</a>
+    <h2 class="section-header">Statistical Arbitrage via Ornstein&ndash;Uhlenbeck Mean Reversion</h2>
+    <p class="muted-text">Independent study &nbsp;&middot;&nbsp; Fall 2026 &nbsp;&middot;&nbsp;
+      <a href="https://github.com/dbuhl8/StatArb">Code on GitHub &#8599;</a></p>
+    <div class="tag-group">
+      <span class="tag">Stochastic Processes</span>
+      <span class="tag">Quant Finance</span>
+      <span class="tag">Python</span>
+    </div>
+
+    <h3 class="subsection-header">Overview</h3>
+    <p class="tab">
+      Pairs trading bets that the price gap between two closely related assets will close again after it
+      widens. This project models that gap, the <em>spread</em>, as an Ornstein&ndash;Uhlenbeck (OU) process,
+      a continuous-time model of a quantity that is pulled back toward a long-run mean:
+    </p>
+    <p style="text-align: center;">
+      dX<sub>t</sub> = &theta;(&mu; &minus; X<sub>t</sub>) dt + &sigma; dW<sub>t</sub>, &nbsp;&nbsp; &theta;, &sigma; &gt; 0
+    </p>
+    <p class="tab">
+      Here &mu; is the mean the spread returns to, &theta; sets how quickly it returns, and &sigma; sets the
+      size of the random shocks. The project works through the theory of the OU process, estimates its
+      parameters from market data, and builds toward a backtested trading rule. It is written in Python with
+      NumPy, statsmodels and yfinance.
+    </p>
+
+    <h3 class="subsection-header">The OU Process</h3>
+    <p class="tab">
+      Solving the SDE with an integrating factor gives X<sub>t</sub> in closed form. It is Gaussian, with mean
+      &mu; + (X<sub>0</sub> &minus; &mu;)e<sup>&minus;&theta;t</sup> and variance
+      (&sigma;<sup>2</sup>/2&theta;)(1 &minus; e<sup>&minus;2&theta;t</sup>), so in the long run it settles to
+      N(&mu;, &sigma;<sup>2</sup>/2&theta;). A deviation from the mean decays like e<sup>&minus;&theta;t</sup>,
+      which gives a <strong>half-life</strong> of ln(2)/&theta;. That number is a direct measure of how quickly
+      a trade on the spread can be expected to pay off.
+    </p>
+    <p class="tab">
+      Sampling the solution every &Delta;t gives an <strong>exact discretization</strong>: an AR(1) recursion
+      X<sub>n+1</sub> = a + bX<sub>n</sub> + &epsilon;<sub>n</sub>, where b = e<sup>&minus;&theta;&Delta;t</sup>
+      and a = &mu;(1 &minus; b). These relations can be inverted to recover (&theta;, &mu;, &sigma;) from
+      (a, b, Var &epsilon;).
+    </p>
+
+    <h3 class="subsection-header">Simulation and Estimation</h3>
+    <p class="tab">
+      I simulated the OU process with the Euler&ndash;Maruyama scheme and compared it path by path against the
+      exact discretization driven by the same Brownian increments. The strong error decreases at first order
+      in &Delta;t, as expected for an SDE with additive noise.
+    </p>
+    <figure class="sim-figure">
+      <img class="gs" src="../../files/statarb_ou_sim.png" alt="OU sample paths for several step sizes, and strong error versus step size">
+      <figcaption>Top: OU sample paths (&theta; = 0.1, &mu; = 0.03, &sigma; = 0.01) for step sizes from
+        10<sup>&minus;1</sup> to about 3&times;10<sup>&minus;5</sup>. Euler&ndash;Maruyama paths are solid and
+        exact-discretization paths are dashed. Bottom: maximum difference between the two paths, which
+        follows O(&Delta;t).</figcaption>
+    </figure>
+    <p class="tab">
+      I also showed that the maximum-likelihood estimator of (&theta;, &mu;, &sigma;) reduces to an ordinary
+      least-squares regression of X<sub>k+1</sub> on X<sub>k</sub>. The slope and intercept give b and a, and
+      the mean squared residual gives Var &epsilon;.
+    </p>
+
+    <h3 class="subsection-header">Pair Selection and Spread</h3>
+    <p class="tab">
+      For a candidate pair, I regress one log price on the other to get a static hedge ratio, form the
+      residual spread, and use an Augmented Dickey&ndash;Fuller test to check that the spread is stationary
+      (p &lt; 0.05). Spreads that pass are then fit to the OU model with the regression above. The fits use
+      daily prices from 2015&ndash;2023, and 2024&ndash;2026 is held out for out-of-sample testing.
+    </p>
+    <div class="two-col-layout">
+      <div class="two-col-left">
+        <figure class="sim-figure">
+          <img class="gs" src="../../files/statarb_ko_pep_spread.png" alt="Coca-Cola versus PepsiCo log-price spread">
+          <figcaption>Log-price spread between Coca-Cola (KO) and PepsiCo (PEP), 2015&ndash;2023.</figcaption>
+        </figure>
+      </div>
+      <div class="two-col-right">
+        <figure class="sim-figure">
+          <img class="gs" src="../../files/statarb_etf_spreads.png" alt="VPU and IDU utilities ETF spread">
+          <figcaption>Screening every pair of top utilities-sector ETFs: VPU &amp; IDU passes both the ADF
+            test and the half-life filter.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h3 class="subsection-header">Next Steps</h3>
+    <p class="tab">This project is still in progress. The remaining stages are:</p>
+    <ul class="course-list">
+      <li><strong>Time-varying hedge ratio:</strong> estimate the hedge ratio with a Kalman filter and compare
+        it to the static regression.</li>
+      <li><strong>Trading rule and backtest:</strong> trade the standardized spread (z-score) with entry and
+        exit thresholds, and evaluate the strategy on the held-out 2024&ndash;2026 data.</li>
+      <li><strong>Broken pairs:</strong> find and analyze a pair whose cointegration breaks down out of
+        sample.</li>
+    </ul>
+
+    <nav class="project-pager">
+      <a href="../Stratified/index.html">&larr; Rotating Stratified Turbulence</a>
+      <a href="../Towson/index.html">Swimmer Locomotion &rarr;</a>
+    </nav>
+
+</main>
+</body>
+</html>
