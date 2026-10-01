@@ -1,82 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <meta name="author" content="Dante Buhl">
-  <meta name="description" content="Dante's Website">
-  <title>Dante's Website</title>
+  <meta name="description" content="Dante Buhl — PhD Student in Applied Mathematics at UC Santa Cruz">
+  <title>Dante Buhl — Boxes & Balls: Quantifying Chaos</title>
   <link href="../../css/cind.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="../../files/clancy.jpg">
+  <link rel="icon" type="image/x-icon" href="../../files/ux_00436.png">
   <script type="text/javascript" src="../../js/jsind.js"></script>
-
-  <!-- Color Palette: matplotlib RdYlBu_r (see css/cind.css)
-    #313695 #4575b4 #74add1 #abd9e9 #e0f3f8 #ffffbf
-    #fee090 #fdae61 #f46d43 #d73027 #a50026
-  -->
-
 </head>
 <body>
 
-    <div class="headerRow colCont">
-    <div class="col-6"><h1>Dante Buhl</h1></div>
-    <div class="col-6">
-        <div class="col-6 leftColDec"><h4>#: (916)370-7513</h4><h4>@: dbuhl8@gmail.com</h4></div>
-        <div class="col-6 specCont">
-          <a href="https://www.linkedin.com/in/dante-buhl-905493267/"><img class="img11" src="../../files/linkin.jpg" alt="linkedinimg"></a>
-          <a href="https://github.com/dbuhl8"><img class="img11" src="../../files/githublogo.png" alt="githublogo"></a>
-        </div>
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-name">
+    <h1>Dante Buhl</h1>
+    <p class="header-subtitle">PhD Student &mdash; Applied Mathematics &mdash; UC Santa Cruz</p>
+  </div>
+  <div class="header-links">
+    <div class="contact-info">
+      <a href="mailto:dbuhl@ucsc.edu">dbuhl@ucsc.edu</a>
+      <a href="tel:+19163707513">(916) 370-7513</a>
     </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/dante-buhl-905493267/" title="LinkedIn">
+        <img class="img11" src="../../files/linkdin.jpg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/dbuhl8" title="GitHub">
+        <img class="img11" src="../../files/githublogo.png" alt="GitHub">
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navBar">
+  <button class="tablink" onclick="location.href='../../index.html#Home'">Home</button>
+  <button class="tablink" onclick="location.href='../../index.html#Research'">Research</button>
+  <button class="tablink" onclick="location.href='../../index.html#EduExp'"><span class="long">Education &amp; Experience</span><span class="short">Experience</span></button>
+  <button class="tablink active" onclick="location.href='../../index.html#Projects'">Projects</button>
+  <button class="tablink" onclick="location.href='../../index.html#CV'">CV / Resume</button>
+</nav>
+
+<!-- ===== PROJECT ===== -->
+<main class="tab-body project-page">
+
+    <a class="back-link" href="../../index.html#Projects">&larr; All projects</a>
+    <h2 class="section-header">Boxes &amp; Balls: Quantifying Chaos</h2>
+    <p class="muted-text">Directed Reading Program, UCSC Mathematics &nbsp;&middot;&nbsp; Mentor: John G. Pelias &nbsp;&middot;&nbsp; Winter 2023</p>
+    <div class="tag-group">
+      <span class="tag">Dynamical Systems</span>
+      <span class="tag">MATLAB</span>
+      <span class="tag">Fractals</span>
     </div>
 
-    <div class="navBar specCont">
-        <button class="spec-3 tablink" onclick="window.location.href='../../index.html';"><p>Home</p></button>
-        <button class="spec-3 tablink" onclick="openPage('chaosFractal', this, '#f46d43')" id="defaultOpen"><p>Projects</p></button>
-        <button class="spec-3 tablink" onclick="window.location.href='../../positions/index.html'"><p>Positions</p></button>
-        <button class="spec-3 tablink" onclick="openPage('About', this, '#f46d43')"><p>Other</p></button>
-    </div>
-
-    <div id="chaosFractal" class="tabcontent colCont">
-        <div class="sidenav col-2 colBord">
-            <button class="hoverButton" onclick="window.location.href='../Towson/index.html';"><h3>Towson REU</h3></button>
-            <button class="hoverButton" onclick="openSidePage('chaosFractal')"><h3>Fractals</h3></button>
-            <button class="hoverButton" onclick="window.location.href='../Snow/index.html';"><h3>Snowboarding</h3></button>
-        </div>
-        <div class="pageContent col-10 colBord colCont">
-          <div class="col-6 leftColDec colBord">
-            <h3>
-              Winter 2023 Mathematics Directed Reading Program (DRP)
-            </h3>
-            <p class="tab">In the winter quarter of 2023, I worked with a mathematics graduate student, John G. Pelias,
-               to research and complete a project surrounding the dimension of chaotic attractors. At the end of the quarter,
-                this culminated into a 15 minute presentation. The title of the presentation is "Boxes and Balls: Quantifying Chaos". </p>
-            <p class="tab">Throughout the process, I was working on developing MatLab code in order to numerically compute the definitions
-              of dimension which I had studied in the efforts of the project. Results from these limited numerical computations are at the
-              end of the presentation. Ultimately, I learned a lot about self-directed research and some of the difficulties of numerical computation. 
-            </p>
-            <p class="tab">Some of the more challenging concepts which I had to learn in this project include:</p>
+    <div class="two-col-layout">
+      <div class="two-col-left">
+        <h3 class="subsection-header">Winter 2023 Mathematics Directed Reading Program (DRP)</h3>
+        <p class="tab">In the winter quarter of 2023, I worked with a mathematics graduate student, John G. Pelias,
+          to research and complete a project surrounding the dimension of chaotic attractors. At the end of the quarter,
+          this culminated into a 15 minute presentation. The title of the presentation is "Boxes and Balls: Quantifying Chaos".</p>
+        <p class="tab">Throughout the process, I was working on developing MatLab code in order to numerically compute the definitions
+          of dimension which I had studied in the efforts of the project. Results from these limited numerical computations are at the
+          end of the presentation. Ultimately, I learned a lot about self-directed research and some of the difficulties of numerical computation.</p>
+        <p class="tab">Some of the more challenging concepts which I had to learn in this project include:</p>
+        <ul class="course-list">
+          <li>The Variational Equation for Dynamical Systems</li>
+          <li>Gram-Schmidt Ortho-normalization Numerical Procedure for n-dim vectors</li>
+          <li>Definitions of Fractal dimension
             <ul>
-              <li>The Variational Equation for Dynamical Systems</li>
-              <li>Gram-Schmidt Ortho-normalization Numerical Procedure for n-dim vectors</li>
-              <li>Definitions of Fractal dimension
-                  <ul>
-                    <li>Box-Counting/Capacity Dimension</li>
-                    <li>Lyapunov Dimension</li>
-                    <li>Renyi Dimension</li>
-                    <li>Pointwise Dimension</li>
-                  </ul>
-              </li>
-              <li>Numerical Computation of Lyapunov Exponents</li>
+              <li>Box-Counting/Capacity Dimension</li>
+              <li>Lyapunov Dimension</li>
+              <li>Renyi Dimension</li>
+              <li>Pointwise Dimension</li>
             </ul>
-          </div>
-          <div class="col-6 colDec colBord colCont">
-            <embed class="presentation" src="../../files/DRP.pdf" type="application/pdf">
-          </div>
-        </div>
+          </li>
+          <li>Numerical Computation of Lyapunov Exponents</li>
+        </ul>
       </div>
+      <div class="two-col-right">
+        <embed class="cv-embed" src="../../files/DRP.pdf" type="application/pdf">
+        <a class="pdf-open" href="../../files/DRP.pdf" target="_blank" rel="noopener">Open PDF &#8599;</a>
+      </div>
+    </div>
 
-    <script>
-        document.getElementById("defaultOpen").click();
-    </script>
+    <nav class="project-pager">
+      <a href="../Towson/index.html">&larr; Swimmer Locomotion</a>
+      <a href="../Snow/index.html">The Pow-der of Ani-snow-tropy &rarr;</a>
+    </nav>
+
+</main>
 </body>
 </html>

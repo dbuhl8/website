@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="author" content="Dante Buhl">
+  <meta name="description" content="Dante Buhl — PhD Student in Applied Mathematics at UC Santa Cruz">
+  <title>Dante Buhl — Rotating Stratified Turbulence</title>
+  <link href="../../css/cind.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="../../files/ux_00436.png">
+  <script type="text/javascript" src="../../js/jsind.js"></script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-name">
+    <h1>Dante Buhl</h1>
+    <p class="header-subtitle">PhD Student &mdash; Applied Mathematics &mdash; UC Santa Cruz</p>
+  </div>
+  <div class="header-links">
+    <div class="contact-info">
+      <a href="mailto:dbuhl@ucsc.edu">dbuhl@ucsc.edu</a>
+      <a href="tel:+19163707513">(916) 370-7513</a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/dante-buhl-905493267/" title="LinkedIn">
+        <img class="img11" src="../../files/linkdin.jpg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/dbuhl8" title="GitHub">
+        <img class="img11" src="../../files/githublogo.png" alt="GitHub">
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navBar">
+  <button class="tablink" onclick="location.href='../../index.html#Home'">Home</button>
+  <button class="tablink" onclick="location.href='../../index.html#Research'">Research</button>
+  <button class="tablink" onclick="location.href='../../index.html#EduExp'"><span class="long">Education &amp; Experience</span><span class="short">Experience</span></button>
+  <button class="tablink active" onclick="location.href='../../index.html#Projects'">Projects</button>
+  <button class="tablink" onclick="location.href='../../index.html#CV'">CV / Resume</button>
+</nav>
+
+<!-- ===== PROJECT ===== -->
+<main class="tab-body project-page">
+
+    <a class="back-link" href="../../index.html#Projects">&larr; All projects</a>
+    <h2 class="section-header">Rotating Stratified Turbulence</h2>
+    <p class="muted-text">PhD research, UC Santa Cruz &nbsp;&middot;&nbsp; Advisor: Pascale Garaud &nbsp;&middot;&nbsp; 2023 &ndash; Present</p>
+    <div class="tag-group">
+      <span class="tag">Stratified Turbulence</span>
+      <span class="tag">DNS</span>
+      <span class="tag">Fortran / MPI</span>
+    </div>
+
+    <div class="project-description">
+      <p class="tab">
+        My PhD research at UC Santa Cruz, advised by Professor Pascale Garaud, focuses on rotating, stably
+        stratified turbulence in geophysical and astrophysical flows. Stratification suppresses vertical
+        motion and organizes the flow into thin, layered structures, while rotation further modifies how
+        energy is transferred between scales and how efficiently the fluid mixes.
+      </p>
+      <p class="tab">
+        I build and run direct numerical simulations of these flows using MPI-parallel Fortran codes on
+        high-performance computing clusters, and analyze the resulting datasets to extract scaling laws for
+        turbulent transport and mixing. This work began with my M.S. thesis, <em>The Effect of Rotation on
+        Stratified Turbulence</em>, and has been presented at APS DFD 2024 and EGU 2025.
+      </p>
+      <h3 class="subsection-header">Some details of the work on this project</h3>
+      <ul class="course-list">
+        <li>Direct numerical simulation of the Boussinesq equations</li>
+        <li>Multiscale models of nonrotating stratified turbulence</li>
+        <li>Mixing models and measurements of turbulent transport</li>
+        <li>MPI-parallel Fortran on HPC clusters</li>
+        <li>Large-scale data analysis in Python</li>
+      </ul>
+    </div>
+
+    <h3 class="subsection-header">Simulations (run B180)</h3>
+    <div class="sim-row" id="simRow">
+      <figure class="sim-figure">
+        <video class="sim-video" muted loop playsinline preload="auto">
+          <source src="../../files/ux_B180.webm" type="video/webm">
+          <source src="../../files/ux_B180.mp4" type="video/mp4">
+        </video>
+        <figcaption>Horizontal velocity <em>u<sub>x</sub></em></figcaption>
+      </figure>
+      <figure class="sim-figure">
+        <video class="sim-video" muted loop playsinline preload="auto">
+          <source src="../../files/uz_B180.webm" type="video/webm">
+          <source src="../../files/uz_B180.mp4" type="video/mp4">
+        </video>
+        <figcaption>Vertical velocity <em>u<sub>z</sub></em></figcaption>
+      </figure>
+      <figure class="sim-figure">
+        <video class="sim-video" muted loop playsinline preload="auto">
+          <source src="../../files/b_B180.webm" type="video/webm">
+          <source src="../../files/b_B180.mp4" type="video/mp4">
+        </video>
+        <figcaption>Buoyancy <em>b</em></figcaption>
+      </figure>
+    </div>
+    <script>
+      playInSync(document.querySelectorAll("#simRow video"));
+    </script>
+
+    <nav class="project-pager">
+      <span></span>
+      <a href="../Towson/index.html">Swimmer Locomotion &rarr;</a>
+    </nav>
+
+</main>
+</body>
+</html>

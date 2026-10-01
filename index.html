@@ -7,7 +7,7 @@
   <meta name="description" content="Dante Buhl — PhD Student in Applied Mathematics at UC Santa Cruz">
   <title>Dante Buhl</title>
   <link href="css/cind.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="files/clancy.jpg">
+  <link rel="icon" type="image/x-icon" href="files/ux_00436.png">
   <script type="text/javascript" src="js/jsind.js"></script>
 </head>
 <body>
@@ -20,12 +20,12 @@
   </div>
   <div class="header-links">
     <div class="contact-info">
-      <span>dbuhl@ucsc.edu</span>
-      <span>(916) 370-7513</span>
+      <a href="mailto:dbuhl@ucsc.edu">dbuhl@ucsc.edu</a>
+      <a href="tel:+19163707513">(916) 370-7513</a>
     </div>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/dante-buhl-905493267/" title="LinkedIn">
-        <img class="img11" src="files/linkedinimg2.png" alt="LinkedIn">
+        <img class="img11" src="files/linkdin.jpg" alt="LinkedIn">
       </a>
       <a href="https://github.com/dbuhl8" title="GitHub">
         <img class="img11" src="files/githublogo.png" alt="GitHub">
@@ -36,11 +36,11 @@
 
 <!-- ===== NAVIGATION ===== -->
 <nav class="navBar">
-  <button class="tablink" onclick="openPage('Home', this, '#f46d43')" id="defaultOpen">Home</button>
-  <button class="tablink" onclick="openPage('Research', this, '#f46d43')">Research</button>
-  <button class="tablink" onclick="openPage('EduExp', this, '#f46d43')">Education &amp; Experience</button>
-  <button class="tablink" onclick="openPage('Projects', this, '#f46d43')">Projects</button>
-  <button class="tablink" onclick="openPage('CV', this, '#f46d43')">CV</button>
+  <button class="tablink" data-tab="Home" onclick="openPage('Home', this, '#db222a')" id="defaultOpen">Home</button>
+  <button class="tablink" data-tab="Research" onclick="openPage('Research', this, '#db222a')">Research</button>
+  <button class="tablink" data-tab="EduExp" onclick="openPage('EduExp', this, '#db222a')"><span class="long">Education &amp; Experience</span><span class="short">Experience</span></button>
+  <button class="tablink" data-tab="Projects" onclick="openPage('Projects', this, '#db222a')">Projects</button>
+  <button class="tablink" data-tab="CV" onclick="openPage('CV', this, '#db222a')">CV / Resume</button>
 </nav>
 
 <!-- ===== HOME TAB ===== -->
@@ -95,6 +95,19 @@
         <span class="tag tag-alt">Scientific Machine Learning</span>
       </div>
 
+      <figure class="sim-figure" style="margin-top: 2em;">
+        <video class="sim-video" id="homeVideo" muted loop playsinline preload="auto"
+               poster="files/ux_00436.png">
+          <source src="files/ux_B180.webm" type="video/webm">
+          <source src="files/ux_B180.mp4" type="video/mp4">
+        </video>
+        <figcaption>Horizontal velocity <em>u<sub>x</sub></em> from a direct numerical simulation of stratified
+          turbulence (run B180). <a href="projects/Stratified/index.html">More simulations &rarr;</a></figcaption>
+      </figure>
+      <script>
+        playInSync([document.getElementById("homeVideo")]);
+      </script>
+
     </div>
 
   </div>
@@ -120,6 +133,7 @@
         <li>Developing and running MPI-parallel Fortran simulations on high-performance computing clusters, and
           analyzing large simulation datasets to extract statistical scaling laws for turbulent transport.</li>
       </ul>
+      <p><a href="projects/Stratified/index.html">See simulations &rarr;</a></p>
       <div class="tag-group">
         <span class="tag">Stratified Turbulence</span>
         <span class="tag">Rotating Flows</span>
@@ -429,6 +443,20 @@
 
     <div class="project-grid">
 
+      <a class="project-card" href="projects/Stratified/index.html">
+        <div class="project-card-inner">
+          <h3>Rotating Stratified Turbulence</h3>
+          <p>Direct numerical simulations of rotating, stably stratified turbulence on HPC clusters, used to
+            measure turbulent mixing and extract scaling laws for transport.</p>
+          <p class="muted-text">PhD research, UCSC &mdash; 2023 &ndash; Present</p>
+          <div class="tag-group">
+            <span class="tag">Stratified Turbulence</span>
+            <span class="tag">DNS</span>
+            <span class="tag">Fortran / MPI</span>
+          </div>
+        </div>
+      </a>
+
       <div class="project-card">
         <div class="project-card-inner">
           <h3>Statistical Arbitrage via Ornstein&ndash;Uhlenbeck Mean Reversion</h3>
@@ -491,22 +519,46 @@
 
 <!-- ===== CV TAB ===== -->
 <div id="CV" class="tabcontent">
-  <div class="tab-body">
+  <div class="tab-body cv-page">
 
-    <h2 class="section-header">Curriculum Vitae</h2>
-    <p>
-      Download: &nbsp;
-      <a class="dl-link" href="files/buhl_cv.pdf" download>buhl_cv.pdf</a>
-      &nbsp;&middot;&nbsp;
-      <a class="dl-link" href="files/buhl_resume.pdf" download>buhl_resume.pdf</a>
-    </p>
-    <embed class="cv-embed" src="files/buhl_cv.pdf" type="application/pdf">
+    <h2 class="section-header">CV &amp; Resume</h2>
+
+    <div class="doc-grid">
+      <div class="doc-panel">
+        <div class="doc-head">
+          <div class="doc-icon" aria-hidden="true">PDF</div>
+          <div class="doc-info">
+            <h3>Curriculum Vitae</h3>
+            <p class="muted-text">Full academic record: research, presentations, teaching &middot; 2 pages</p>
+          </div>
+          <div class="doc-actions">
+            <a class="doc-btn" href="files/buhl_cv.pdf" target="_blank" rel="noopener">View &#8599;</a>
+            <a class="doc-btn doc-btn-primary" href="files/buhl_cv.pdf" download>Download &#8595;</a>
+          </div>
+        </div>
+        <embed class="doc-embed" src="files/buhl_cv.pdf" type="application/pdf">
+      </div>
+      <div class="doc-panel">
+        <div class="doc-head">
+          <div class="doc-icon" aria-hidden="true">PDF</div>
+          <div class="doc-info">
+            <h3>Resume</h3>
+            <p class="muted-text">Concise summary of skills and experience &middot; 2 pages</p>
+          </div>
+          <div class="doc-actions">
+            <a class="doc-btn" href="files/buhl_resume.pdf" target="_blank" rel="noopener">View &#8599;</a>
+            <a class="doc-btn doc-btn-primary" href="files/buhl_resume.pdf" download>Download &#8595;</a>
+          </div>
+        </div>
+        <embed class="doc-embed" src="files/buhl_resume.pdf" type="application/pdf">
+      </div>
+    </div>
 
   </div>
 </div>
 
 <script>
-  document.getElementById("defaultOpen").click();
+  openTabFromHash();
 </script>
 </body>
 </html>
