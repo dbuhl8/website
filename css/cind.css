@@ -507,6 +507,16 @@ a:hover { color: var(--scarlet); }
 }
 
 /* ===================================================================
+   TEACHING
+   =================================================================== */
+.teaching-page { max-width: 1100px; }
+.teaching-page .doc-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 16px;
+}
+.course-block { margin-bottom: 2em; }
+
+/* ===================================================================
    PROJECT PAGES
    =================================================================== */
 /* Static version of the highlight openPage() applies to the active tab */
